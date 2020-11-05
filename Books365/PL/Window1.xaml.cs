@@ -9,7 +9,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Books365.BLL;
 
 namespace Books365.PL
 {
@@ -25,8 +24,7 @@ namespace Books365.PL
 
         private void button_go_Click(object sender, RoutedEventArgs e)
         {
-            ReadingStatusesBLL rea = new ReadingStatusesBLL();
-            datagrid.ItemsSource = rea.GetReadingStatuses().DefaultView;
+            
         }
     }
 }

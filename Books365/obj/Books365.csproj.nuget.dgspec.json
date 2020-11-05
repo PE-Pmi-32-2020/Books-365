@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Volod\\source\\repos\\Books365\\Books365\\Books365.csproj": {}
+    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Volod\\source\\repos\\Books365\\Books365\\Books365.csproj": {
+    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Volod\\source\\repos\\Books365\\Books365\\Books365.csproj",
+        "projectUniqueName": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
         "projectName": "Books365",
-        "projectPath": "C:\\Users\\Volod\\source\\repos\\Books365\\Books365\\Books365.csproj",
+        "projectPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
         "packagesPath": "C:\\Users\\Volod\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Volod\\source\\repos\\Books365\\Books365\\obj\\",
+        "outputPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.9, )"
@@ -52,10 +56,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.9, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.2, )"
             }
           },
           "imports": [
