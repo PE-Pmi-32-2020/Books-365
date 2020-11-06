@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Books365.BLL;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Security.RightsManagement;
 using System.Text;
 
 namespace Books365
@@ -20,6 +22,11 @@ namespace Books365
         public string BookStatus { get; set; }
     }
 
+    class EmailOfCurrentUser
+    {
+        [Key]
+        public string Email { get; set; }
+    }
 
     class Notification
     {
@@ -59,12 +66,15 @@ namespace Books365
         [MaxLength(50)]
         public string Author { get; set; }
     }
+
+
     class AppContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<ReadingStatus> ReadingStatuses { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<EmailOfCurrentUser> EmailCurrentUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -80,8 +90,7 @@ namespace Books365
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=Books365DB; Trusted_Connection=True");
-
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=Books365DB; Trusted_Connection=True; MultipleActiveResultSets=true");
         }
     }
 }

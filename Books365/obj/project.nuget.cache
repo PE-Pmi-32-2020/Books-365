@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cWgZWkCpKOIY0I3KP1NzTFOEfj5aG0x3v6RdO/f62JwGlhBRTYJwlGPVHkfd/L5VoNeXYSmNnE4eWM6qCF5ccA==",
+  "dgSpecHash": "UtauD72MkvxfQSMfkrGljwxMB1TbTWqAO75H1rUb2cXRvE9aFxZExggMPXJhpZOTMde4u57Y390o9S2nwYuoyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Volod\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.8.0\\mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
     "C:\\Users\\Volod\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Volod\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Volod\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

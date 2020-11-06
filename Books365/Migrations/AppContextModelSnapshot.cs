@@ -44,6 +44,16 @@ namespace Books365.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("Books365.EmailOfCurrentUser", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Email");
+
+                    b.ToTable("EmailCurrentUser");
+                });
+
             modelBuilder.Entity("Books365.Notification", b =>
                 {
                     b.Property<DateTime>("Date")
