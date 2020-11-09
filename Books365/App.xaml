@@ -6,11 +6,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="c:\users\volod\source\repos\book365git\books365\pl\books365button.xaml"/>
+                <ResourceDictionary Source="/Pl/Books365Button.xaml"/>
+                <ResourceDictionary Source="/Pl/Books365DataGrid.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
-
     </Application.Resources>
 </Application>
 

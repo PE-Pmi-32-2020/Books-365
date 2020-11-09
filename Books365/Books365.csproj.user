@@ -5,7 +5,13 @@
     <Compile Update="App.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PL\AddNotification.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PL\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PL\Notifications.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\Register.xaml.cs">
@@ -22,10 +28,19 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="PL\AddNotification.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="PL\Books365Button.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="PL\Books365DataGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="PL\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PL\Notifications.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\Register.xaml">

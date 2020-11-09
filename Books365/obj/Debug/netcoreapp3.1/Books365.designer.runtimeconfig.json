@@ -6,9 +6,9 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Volod\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Volod\\.nuget\\packages",
-      "C:\\Microsoft\\Xamarin\\NuGet"
+      "C:\\Users\\Vovchyk Halamaha\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

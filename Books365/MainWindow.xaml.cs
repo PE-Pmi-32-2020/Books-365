@@ -1,6 +1,7 @@
 ﻿using Books365.PL;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,11 +34,14 @@ namespace Books365
                 {
                     Login w1 = new Login();
                     w1.Show();
+                    this.Close();
                 }
                 else
                 {
-                    Window1 w1 = new Window1();
+                    Notifications w1 = new Notifications();
                     w1.Show();
+                    this.Close();
+                  
                 }
             }
         }

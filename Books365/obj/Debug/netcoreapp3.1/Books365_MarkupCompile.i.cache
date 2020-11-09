@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\
+C:\Users\Vovchyk Halamaha\source\repos\BookProject\Books365\obj\Debug\netcoreapp3.1\
 Books365
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Volod\source\repos\Book365git\Books365\App.xaml
-5-332688843
+C:\Users\Vovchyk Halamaha\source\repos\BookProject\Books365\App.xaml
+8-1768312454
 
-151647952940
-219277526280
-MainWindow.xaml;PL\Books365Button.xaml;PL\Login.xaml;PL\Register.xaml;PL\Window1.xaml;
+171074483646
+2191509460842
+MainWindow.xaml;PL\AddNotification.xaml;PL\Books365Button.xaml;PL\Books365DataGrid.xaml;PL\Login.xaml;PL\Notifications.xaml;PL\Register.xaml;PL\Window1.xaml;
 
 False
 
