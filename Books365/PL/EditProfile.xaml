@@ -27,7 +27,7 @@
         <StackPanel VerticalAlignment="Center">
             <Image Source="Images/book365logo.png" Width="80" Margin="10" HorizontalAlignment="Center"/>
             <TextBlock
-                Text="Books 365"
+                Text="Add New Book"
                        FontWeight="Light"
                        FontFamily="helvetica"
                        FontSize="22"

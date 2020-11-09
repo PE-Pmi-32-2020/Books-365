@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Kyryl\Desktop\Books365\Books365\App.xaml
-7-1520782281
+81867070462
 
-18225551042
+191524974869
 221299542802
-MainWindow.xaml;PL\Books365Button.xaml;PL\EditProfile.xaml;PL\Login.xaml;PL\Profile.xaml;PL\Register.xaml;PL\Window1.xaml;
+MainWindow.xaml;PL\AddBook.xaml;PL\Books365Button.xaml;PL\EditProfile.xaml;PL\Login.xaml;PL\Profile.xaml;PL\Register.xaml;PL\Window1.xaml;
 
-False
+True
 
