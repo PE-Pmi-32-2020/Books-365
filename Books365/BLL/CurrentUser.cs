@@ -17,7 +17,8 @@ namespace Books365.BLL
         public string Password { get; set; }
 
         public int SecretPin { get; set; }
-
         
+
     }
+
 }
