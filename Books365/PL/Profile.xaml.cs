@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using Books365.BLL;
 using System.Collections.Generic;
 using OxyPlot;
+using OxyPlot.Axes;
 
 namespace Books365.PL
 {
@@ -77,16 +78,8 @@ namespace Books365.PL
                 }
                 else
                     favouriteautor.Text += "Wow. A lot of Authors to Like";
-                List< DataPoint > Points = new List<DataPoint> { };
-                Points.Add(new DataPoint(0, 4));
-                Points.Add(new DataPoint(2, 8));
-                Points.Add(new DataPoint(4, 3));
-                Points.Add(new DataPoint(5, 6));
-                Points.Add(new DataPoint(7, 5));
-                Points.Add(new DataPoint(8, 9));
-                Points.Add(new DataPoint(9, 10));
-                Points.Add(new DataPoint(10, 1));
-                Points.Add(new DataPoint(11, 2));
+                
+
             }
            
         }

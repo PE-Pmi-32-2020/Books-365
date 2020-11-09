@@ -38,9 +38,9 @@
         <StackPanel VerticalAlignment="Top" Margin="10,250,0,0">
             <TextBlock x:Name="favouriteautor" Text="Favourite autor(s): " FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="MediumAquamarine"></TextBlock>
         </StackPanel>
-        <oxy:Plot Title="{Binding Title}" VerticalAlignment="Bottom" Height="200" >
-            <oxy:Plot.Series>
-                <oxy:LineSeries ItemsSource="{Binding Points}"/>
+        <oxy:Plot x:Name="myPlot" Title="{Binding Title}" VerticalAlignment="Bottom" Height="200" >
+            <oxy:Plot.Series >
+                <oxy:ColumnSeries LabelFormatString="Pages " LabelPlacement="Inside" ItemsSource="{Binding Columns}" FillColor="MediumAquamarine" />
             </oxy:Plot.Series>
         </oxy:Plot>
         
