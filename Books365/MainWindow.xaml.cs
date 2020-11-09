@@ -23,21 +23,23 @@ namespace Books365
     {
         public MainWindow()
         {
-            this.Visibility = Visibility.Hidden;
+            
             InitializeComponent();
+            
             using (AppContext db = new AppContext())
             {
-                
                 var l = db.EmailCurrentUser.ToList();
                 if (l.Count == 0)
                 {
                     Login w1 = new Login();
                     w1.Show();
+                    this.Close();
                 }
                 else
                 {
                     Window1 w1 = new Window1();
                     w1.Show();
+                    this.Close();
                 }
             }
         }

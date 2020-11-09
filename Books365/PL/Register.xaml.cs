@@ -106,12 +106,82 @@ namespace Books365.PL
                     
                         );
                     db.SaveChanges();
+                    this.Close();
                     Window1 w1 = new Window1();
                     w1.Show();
-                    this.Close();
                 }
             }
             
+        }
+
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void EmailTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (EmailTextBox.Text == "Email")
+            {
+
+                EmailTextBox.Text = "";
+
+            }
+        }
+
+        private void FirstNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (FirstNameTextBox.Text == "FirstName")
+            {
+
+                FirstNameTextBox.Text = "";
+
+            }
+        }
+
+        private void LastNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (LastNameTextBox.Text == "LastName")
+            {
+
+                LastNameTextBox.Text = "";
+
+            }
+        }
+
+        private void PasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (PasswordTextBox.Password.ToString() == "Password")
+            {
+
+                PasswordTextBox.Password = "";
+
+            }
+        }
+
+        private void ConfirmPasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (ConfirmPasswordTextBox.Password.ToString() == "Password")
+            {
+
+                ConfirmPasswordTextBox.Password = "";
+
+            }
+        }
+
+        private void SecretPinTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (SecretPinTextBox.Text == "SecretPin")
+            {
+
+                SecretPinTextBox.Text = "";
+
+            }
         }
     }
 }
