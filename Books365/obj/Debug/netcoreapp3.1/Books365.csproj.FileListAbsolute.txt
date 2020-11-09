@@ -191,10 +191,13 @@ C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\PL\Window1.baml
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.g.resources
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.AssemblyInfoInputs.cache
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.AssemblyInfo.cs
-C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj.CoreCompileInputs.cache
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj.CopyComplete
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.dll
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.pdb
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.genruntimeconfig.cache
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\PL\Profile.g.cs
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\PL\Profile.baml
+C:\Users\Kyryl\Desktop\Books365\Books365\bin\Debug\netcoreapp3.1\OxyPlot.dll
+C:\Users\Kyryl\Desktop\Books365\Books365\bin\Debug\netcoreapp3.1\OxyPlot.Wpf.dll
+C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj.CoreCompileInputs.cache

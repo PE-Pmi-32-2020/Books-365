@@ -2,20 +2,18 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Books365.PL" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Profile" Height="450" Width="800"
+        Title="Profile" Height="500" Width="550"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize">
-
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,10,0,-10">
+        <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,10,0,-10" RenderTransformOrigin="0.496,0.556">
             <Border.Background>
                 <LinearGradientBrush>
 
@@ -24,21 +22,27 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Image Source="Images/logo365.jpg" Width="100" Margin="10,0,0,100" HorizontalAlignment="Left"/>
-        <StackPanel VerticalAlignment="Center" Margin="0,0,0,100">
-            <TextBlock x:Name="Username" Text="SomeUser" Margin="140,0,0,0" FontSize="40" FontWeight="Light" FontFamily="helvetica" Foreground="White"></TextBlock>
+        <Image Source="Images/book365logo.png" Width="120" Margin="0,0,0,100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <StackPanel VerticalAlignment="Top" Margin="0,100,0,0">
+            <TextBlock x:Name="Username" Text="SomeUser" FontSize="40" FontWeight="Light" FontFamily="helvetica" Foreground="MediumAquamarine" HorizontalAlignment="Center"></TextBlock>
         </StackPanel>
         
-        <StackPanel VerticalAlignment="Center" Margin="10,50,0,0">
-            <TextBlock x:Name="Total" Text="Total Pages Read: " Margin="0,0,0,0" FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="White"></TextBlock>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,170,0,0">
+            <TextBlock x:Name="Total" Text="Total Pages Read: "  FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="MediumAquamarine"></TextBlock>
         </StackPanel>
         
-        <StackPanel VerticalAlignment="Center" Margin="10,100,0,0">
-            <TextBlock x:Name="Booksfinished" Text="Books Finished: " FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="White"></TextBlock>
+        <StackPanel VerticalAlignment="Top" Margin="10,210,0,0">
+            <TextBlock x:Name="Booksfinished" Text="Books Finished: " FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="MediumAquamarine"></TextBlock>
         </StackPanel>
-        <StackPanel VerticalAlignment="Center" Margin="10,150,0,0">
-            <TextBlock x:Name="favouriteautor" Text="Favourite autor(s): " FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="White"></TextBlock>
+        
+        <StackPanel VerticalAlignment="Top" Margin="10,250,0,0">
+            <TextBlock x:Name="favouriteautor" Text="Favourite autor(s): " FontSize="22" FontWeight="Light" FontFamily="helvetica" Foreground="MediumAquamarine"></TextBlock>
         </StackPanel>
-        <Canvas x:Name="Graph1" Height="250" Width="250" HorizontalAlignment="Right" Margin="0,40,40,0"></Canvas>
+        <oxy:Plot Title="{Binding Title}" VerticalAlignment="Bottom" Height="200" >
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding Points}"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+        
     </Grid>
 </Window>

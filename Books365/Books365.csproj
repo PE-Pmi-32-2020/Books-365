@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PL\Images\book365logo.png" />
     <None Remove="PL\Images\logo365.jpg" />
   </ItemGroup>
 
@@ -18,9 +19,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="OxyPlot.Wpf" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="PL\Images\book365logo.png" />
     <Resource Include="PL\Images\logo365.jpg" />
   </ItemGroup>
 
