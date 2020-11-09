@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Books365.BLL;
-using System.Collections.Generic;
 using OxyPlot;
 using OxyPlot.Axes;
 
@@ -83,6 +82,14 @@ namespace Books365.PL
             }
            
         }
-        
+
+        private void Edit_Profile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Main_Menu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
