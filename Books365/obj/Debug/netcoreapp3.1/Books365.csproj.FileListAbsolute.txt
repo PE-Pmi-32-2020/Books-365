@@ -128,3 +128,5 @@ C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Books365.dll.config
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Register.g.cs
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Register.baml
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\ForgotPassword.g.cs
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\ForgotPassword.baml

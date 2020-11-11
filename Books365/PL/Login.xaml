@@ -109,6 +109,12 @@
             <Button Width="100" Height="40" Content="Login" Margin="60,0,60,0" Click="Button_Click_Login"/>
             <Button Width="100" Height="40" Content="Register" Click="Button_Click_Register"/>
         </StackPanel>
-
+        <StackPanel Margin="20" Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Orientation="Vertical">
+            <Label x:Name="LabelForgot" Margin="-5" MouseDown="LabelForgot_MouseDown" MouseLeave="LabelForgot_MouseLeave" MouseEnter="Label_MouseEnter" HorizontalAlignment="Center" Content="Forgot Password?" VerticalAlignment="Top" FontFamily="Segoe UI Emoji" Foreground="White"></Label>
+            <Border Width="100"
+                Height="2"
+                Background="White"
+                Opacity="0.5" VerticalAlignment="Top"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Volod\source\repos\Book365git\Books365\App.xaml
-5-332688843
+61409385227
 
-151647952940
+17-776558179
 219277526280
-MainWindow.xaml;PL\Books365Button.xaml;PL\Login.xaml;PL\Register.xaml;PL\Window1.xaml;
+MainWindow.xaml;PL\Books365Button.xaml;PL\ForgotPassword.xaml;PL\Login.xaml;PL\Register.xaml;PL\Window1.xaml;
 
-False
+True
 

@@ -94,5 +94,22 @@ namespace Books365.PL
 
             }
         }
+
+        private void Label_MouseEnter(object sender, MouseEventArgs e)
+        {
+            LabelForgot.Opacity = 0.4;
+        }
+
+        private void LabelForgot_MouseLeave(object sender, MouseEventArgs e)
+        {
+            LabelForgot.Opacity = 1;
+        }
+
+        private void LabelForgot_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ForgotPassword fg = new ForgotPassword(EmailTextBox.Text);
+            fg.Show();
+            this.Close();
+        }
     }
 }
