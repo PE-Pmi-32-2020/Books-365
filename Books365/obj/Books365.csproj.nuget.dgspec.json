@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj": {}
+    "C:\\Users\\acer\\source\\repos\\Books-365\\Books365\\Books365.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj": {
+    "C:\\Users\\acer\\source\\repos\\Books-365\\Books365\\Books365.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\source\\repos\\Books-365\\Books365\\Books365.csproj",
         "projectName": "Books365",
-        "projectPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
-        "packagesPath": "C:\\Users\\Volod\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\obj\\",
+        "projectPath": "C:\\Users\\acer\\source\\repos\\Books-365\\Books365\\Books365.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acer\\source\\repos\\Books-365\\Books365\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Volod\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.intenselab.net:8445/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,18 +1,18 @@
 ﻿Books365
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\acer\Desktop\Ingeneering\Books-365-Kate\Books365\obj\Debug\netcoreapp3.1\
+C:\Users\acer\source\repos\Books-365\Books365\obj\Debug\netcoreapp3.1\
 Books365
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\acer\Desktop\Ingeneering\Books-365-Kate\Books365\App.xaml
+C:\Users\acer\source\repos\Books-365\Books365\App.xaml
 91619540289
 
-181464560038
+20-1558416392
 219581681558
 MainWindow.xaml;PL\AddBook.xaml;PL\AddNotification.xaml;PL\Books365Button.xaml;PL\Books365DataGrid.xaml;PL\Login.xaml;PL\Notifications.xaml;PL\Register.xaml;PL\Window1.xaml;
 

@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="c:\users\volod\source\repos\book365git\books365\pl\books365button.xaml"/>
+                <ResourceDictionary Source="C:\Users\acer\Desktop\Ingeneering\Books-365-Kate\Books365\PL\Books365Button.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

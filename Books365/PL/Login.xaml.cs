@@ -17,7 +17,7 @@ namespace Books365.PL
     /// Interaction logic for Login.xaml
     /// </summary>
     public partial class Login : Window
-    {
+    { 
         public Login()
         {
             InitializeComponent();
