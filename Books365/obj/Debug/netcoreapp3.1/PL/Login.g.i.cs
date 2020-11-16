@@ -71,7 +71,7 @@ namespace Books365.PL {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Books365;component/pl/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Books365;V1.0.0.0;component/pl/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\PL\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
