@@ -16,22 +16,16 @@ namespace Books365.PL
         public Window1()
         {
             InitializeComponent();
-            //помилка коли база пуста не використовуй лоад користуйся LINQ
 
-            //using (AppContext db = new AppContext())
-            //{
-            //    db.Books.Load();
-            //    db.ReadingStatuses.Load();
+            using (AppContext db = new AppContext())
+            {
+                BooksGrid.ItemsSource = (from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten }).ToList();
 
-                
-            //    //BooksGrid.ItemsSource = db.Books.Local.ToBindingList();
-            //    var join = from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten };
-            //    BooksGrid.ItemsSource = join;
-            //    var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
-            //    var Registered_user = db.Users
-            //                          .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
-            //    user_name_text_block.Text = Registered_user.FirstName + " " + Registered_user.LastName;
-            //}
+                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
+                var Registered_user = db.Users
+                                      .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
+                user_name_text_block.Text = Registered_user.FirstName + " " + Registered_user.LastName;
+            }
         }
 
         private void notifications_button_Click(object sender, RoutedEventArgs e)
@@ -47,13 +41,15 @@ namespace Books365.PL
             {
                 db.Books.Load();
                 BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
-                                                .Where(b=>b.Title==search_textbox.Text);
+                                                .Where(b => b.Title == search_textbox.Text);
             }
         }
 
         private void advanced_search_button_Click(object sender, RoutedEventArgs e)
         {
-            
+            AdvancedSearch search = new AdvancedSearch();
+            search.Show();
+            this.Close();
         }
 
         private void log_out_button_Click(object sender, RoutedEventArgs e)
@@ -63,7 +59,7 @@ namespace Books365.PL
                 db.EmailCurrentUser.Remove(db.EmailCurrentUser.FirstOrDefault());
                 db.SaveChanges();
             }
-            
+
 
             Login login = new Login();
             login.Show();

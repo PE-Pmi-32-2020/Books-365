@@ -5,14 +5,17 @@
     <Compile Update="App.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PL\AdvancedSearch.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PL\EditProfile.xaml.cs">
-        <SubType>Code</SubType>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\ForgotPassword.xaml.cs">
-	<SubType>Code</SubType>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\AddNotification.xaml.cs">
-	<SubType>Code</SubType>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\AddBook.xaml.cs">
       <SubType>Code</SubType>
@@ -21,7 +24,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\Profile.xaml.cs">
-	<SubType>Code</SubType>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\Notifications.xaml.cs">
       <SubType>Code</SubType>
@@ -46,14 +49,17 @@
     <Page Update="PL\AddNotification.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="PL\AdvancedSearch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="PL\Books365Button.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\EditProfile.xaml">
-	    <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\ForgotPassword.xaml">
-	    <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\Books365DataGrid.xaml">
       <SubType>Designer</SubType>
@@ -62,7 +68,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\Profile.xaml">
-        <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\Notifications.xaml">
       <SubType>Designer</SubType>
