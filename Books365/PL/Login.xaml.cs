@@ -20,7 +20,7 @@ namespace Books365.PL
     { 
         public Login()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         //private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -33,27 +33,15 @@ namespace Books365.PL
 
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
-            using (AppContext db = new AppContext())
+            Books365.BLL.User u = new Books365.BLL.User();
+            if (u.Login(this.EmailTextBox, this.PasswordTextBox))
             {
-                var Registered_user_email = db.Users
-                       .Where(u => u.Email == EmailTextBox.Text.ToString()).FirstOrDefault();
-                var Registered_user_password = db.Users.Where(u => u.Password == PasswordTextBox.Password.ToString()).FirstOrDefault();
-                if (Registered_user_email == null || Registered_user_password == null)
-                {
-                    MessageBox.Show("Wrong password or email", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                if (Registered_user_email != null && Registered_user_password != null)
-                {
-                    db.EmailCurrentUser.Add(new EmailOfCurrentUser
-                    {
-                        Email = EmailTextBox.Text.ToString()
-                    }
-                        );
-                    db.SaveChanges();
-                    Window1 w1 = new Window1();
-                    w1.Show();
-                    this.Close();
-                }
+                Window1 w1 = new Window1();
+                w1.Show();
+                this.Close();
+            }
+            else
+            {
             }
         }
 
@@ -63,6 +51,7 @@ namespace Books365.PL
             r.Show();
             this.Close();
         }
+
         private void Button_Click_Minimize(object sender, RoutedEventArgs e)
         {
             SystemCommands.MinimizeWindow(this);
@@ -75,37 +64,33 @@ namespace Books365.PL
 
         private void EmailTextBox_Click(object sender, MouseEventArgs e)
         {
-            if (EmailTextBox.Text == "Email")
+            if (this.EmailTextBox.Text == "Email")
             {
-
-                EmailTextBox.Text = "";
-
+                this.EmailTextBox.Text = string.Empty;
             }
         }
 
         private void PasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (PasswordTextBox.Password.ToString() == "Password")
+            if (this.PasswordTextBox.Password.ToString() == "Password")
             {
-
-                PasswordTextBox.Password= "";
-
+                this.PasswordTextBox.Password = string.Empty;
             }
         }
 
         private void Label_MouseEnter(object sender, MouseEventArgs e)
         {
-            LabelForgot.Opacity = 0.4;
+            this.LabelForgot.Opacity = 0.4;
         }
 
         private void LabelForgot_MouseLeave(object sender, MouseEventArgs e)
         {
-            LabelForgot.Opacity = 1;
+            this.LabelForgot.Opacity = 1;
         }
 
         private void LabelForgot_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ForgotPassword fg = new ForgotPassword(EmailTextBox.Text);
+            ForgotPassword fg = new ForgotPassword(this.EmailTextBox.Text);
             fg.Show();
             this.Close();
         }

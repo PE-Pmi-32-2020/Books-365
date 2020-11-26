@@ -20,23 +20,27 @@ namespace Books365.PL
     /// </summary>
     public partial class ForgotPassword : Window
     {
-        public string email { get; set; }
+        public string Email { get; set; }
+
         public ForgotPassword(string emailTextBox)
         {
-            InitializeComponent();
-            email = emailTextBox;
+            this.InitializeComponent();
+            this.Email = emailTextBox;
         }
 
         private void SecretPinTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if(SecretPinTextBox.Text=="SecretPin")
-                SecretPinTextBox.Text = "";
+            if (this.SecretPinTextBox.Text == "SecretPin")
+            {
+                this.SecretPinTextBox.Text = string.Empty;
+            }
         }
 
         private void Button_Click_Exit(object sender, RoutedEventArgs e)
         {
             SystemCommands.CloseWindow(this);
         }
+
         private void Button_Click_Minimize(object sender, RoutedEventArgs e)
         {
             SystemCommands.MinimizeWindow(this);
@@ -47,25 +51,26 @@ namespace Books365.PL
             using (AppContext db = new AppContext())
             {
                 Validator validator = new Validator();
-                if(validator.IsEmpty(SecretPinTextBox)||
-                    !validator.SecretPinIsCorrect(SecretPinTextBox)||
-                    validator.IsEmpty(NewPasswordTextBox)||
-                    validator.IsEmpty(NewPasswordConfirmTextBox) ||
-                    !validator.PasswordIsCorrect(NewPasswordTextBox)||
-                    !validator.ConfirmIsSame(NewPasswordConfirmTextBox, NewPasswordTextBox)){ }
-                else 
-                { 
-                
-                    var Registered_user_email = db.Users
-                           .Where(u => u.Email == email).FirstOrDefault();
-                    var Registered_user_pin = db.Users.Where(u => u.SecretPin == int.Parse(SecretPinTextBox.Text.ToString())&&u.Email==Registered_user_email.Email).FirstOrDefault();
-                    if (Registered_user_pin == null)
+                if (validator.IsEmpty(this.SecretPinTextBox) ||
+                    !validator.SecretPinIsCorrect(this.SecretPinTextBox) ||
+                    validator.IsEmpty(this.NewPasswordTextBox) ||
+                    validator.IsEmpty(this.NewPasswordConfirmTextBox) ||
+                    !validator.PasswordIsCorrect(this.NewPasswordTextBox) ||
+                    !validator.ConfirmIsSame(this.NewPasswordConfirmTextBox, this.NewPasswordTextBox))
+                {
+                }
+                else
+                {
+                    var registered_user_email = db.Users
+                           .Where(u => u.Email == this.Email).FirstOrDefault();
+                    var registered_user_pin = db.Users.Where(u => u.SecretPin == int.Parse(this.SecretPinTextBox.Text.ToString()) && u.Email == registered_user_email.Email).FirstOrDefault();
+                    if (registered_user_pin == null)
                     {
                         MessageBox.Show("Wrong secret pin or email", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     else
                     {
-                        User u = db.Users.Single(u => u.Email == email);
+                        User u = db.Users.Single(u => u.Email == Email);
                         u.Password = NewPasswordTextBox.Text;
                         db.SaveChanges();
                         this.Close();
@@ -78,13 +83,18 @@ namespace Books365.PL
 
         private void NewPasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (NewPasswordTextBox.Text == "New password")
-                NewPasswordTextBox.Text = "";
+            if (this.NewPasswordTextBox.Text == "New password")
+            {
+                this.NewPasswordTextBox.Text = string.Empty;
+            }
         }
+
         private void ConfirmNewPasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (NewPasswordConfirmTextBox.Text == "Confirm new password")
-                NewPasswordConfirmTextBox.Text = "";
+            if (this.NewPasswordConfirmTextBox.Text == "Confirm new password")
+            {
+                this.NewPasswordConfirmTextBox.Text = string.Empty;
+            }
         }
     }
 }

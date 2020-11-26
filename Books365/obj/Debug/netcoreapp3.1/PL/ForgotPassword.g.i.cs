@@ -79,7 +79,7 @@ namespace Books365.PL {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Books365;component/pl/forgotpassword.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Books365;V1.0.0.0;component/pl/forgotpassword.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\PL\ForgotPassword.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

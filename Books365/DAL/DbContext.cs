@@ -68,7 +68,7 @@ namespace Books365
     }
 
 
-    class AppContext : DbContext
+    class AppContext : DbContext,IDisposable
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Notification> Notifications { get; set; }
@@ -78,19 +78,24 @@ namespace Books365
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Notification>((pc =>
+            modelBuilder.Entity<Notification>( pc =>
             {
                 pc.HasNoKey();
-            }));
-            modelBuilder.Entity<ReadingStatus>((pc =>
-            {
-                pc.HasNoKey();
-            }));
+            });
+            Action<Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<ReadingStatus>> buildAction = pc =>
+                             {
+                                 _ = pc.HasNoKey();
+                             };
+            _ = modelBuilder.Entity<ReadingStatus>(buildAction);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = Books365DB; Trusted_Connection = True; MultipleActiveResultSets = true");
+        }
+        public void Dispose()
+        {
+            base.Dispose();
         }
     }
 }
