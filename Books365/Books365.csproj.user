@@ -12,6 +12,9 @@
 	<SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\AddNotification.xaml.cs">
+	<SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PL\AddBook.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\Login.xaml.cs">
@@ -35,6 +38,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PL\AddBook.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\AddNotification.xaml">
