@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="Profile" Height="500" Width="550"
         AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" ResizeMode="NoResize">
+        WindowStyle="None" ResizeMode="NoResize"
+        Icon="/PL/Images/bicon.ico">
     <Window.DataContext>
         <local:MainViewModel/>
     </Window.DataContext>

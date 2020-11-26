@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Register" Height="450" Width="500"
         AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" WindowStartupLocation="CenterScreen">
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Icon="/PL/Images/bicon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
