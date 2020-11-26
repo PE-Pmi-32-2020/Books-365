@@ -30,7 +30,9 @@ namespace Books365
 
     class Notification
     {
+        [Key]
         public string Message { get; set; }
+        
         [MinLength(6), MaxLength(50)]
         public string Email { get; set; }
         public DateTime Date { get; set; }
@@ -78,10 +80,6 @@ namespace Books365
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Notification>((pc =>
-            {
-                pc.HasNoKey();
-            }));
             modelBuilder.Entity<ReadingStatus>((pc =>
             {
                 pc.HasNoKey();

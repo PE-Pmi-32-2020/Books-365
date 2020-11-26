@@ -31,21 +31,21 @@ namespace Books365.PL
            
             using (AppContext db = new AppContext())
             {
-                var date = Convert.ToDateTime(time.Text);
+                var date = Convert.ToDateTime(Picker.Text);
                 var message = Message.Text.ToString();
-                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().ToString();
+                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
                 db.Notifications.Add(new Notification
                 {
                     Message = message,
                     Date = date,
                     Email = currentUserEmail
                 });
-                //not.Table.Items.Add(new Notification
-                //{
-                //    Message = message,
-                //    Date = date,
-                //    Email = currentUserEmail
-                //});
+                not.Table.Items.Add(new Notification
+                {
+                    Message = message,
+                    Date = date,
+                    Email = currentUserEmail
+                });
                 db.SaveChanges();
                 this.Close();
                 

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +21,7 @@ namespace Books365.PL
 
     public partial class Notifications : Window
     {
+        private ObservableCollection<Notification> Messages{ get; set; }
         public Notifications()
         {
             InitializeComponent();
@@ -36,6 +39,30 @@ namespace Books365.PL
             w1.Show();
             this.Close();
            
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            Notification notification = Table.SelectedItem as Notification;
+            Messages.Remove(notification);
+        }
+
+        private void Load_Table(object sender, RoutedEventArgs e)
+        {
+            using (AppContext db = new AppContext())
+            {
+                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
+                var notifications = db.Notifications.Where(u => u.Email == currentUserEmail).ToList();
+                Messages = new ObservableCollection<Notification>();
+
+                foreach (var item in notifications)
+                {
+                    Messages.Add(item);
+                }
+
+                Table.ItemsSource = Messages;
+            }
+            
         }
     }
 }
