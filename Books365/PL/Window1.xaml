@@ -28,7 +28,7 @@
 
         </Border>
         <TextBox x:Name="search_textbox" HorizontalAlignment="Left" Margin="42,56,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="109" Height="24" Grid.Row="1"/>
-        <TextBlock x:Name="user_name_text_block" Text="UserName" TextWrapping="Wrap" Margin="670,44,21,374" Foreground="White" Grid.RowSpan="2"/>
+        <TextBlock x:Name="user_name_text_block" MouseDown="user_name_text_block_MouseDown" Text="UserName" TextWrapping="Wrap" Margin="670,44,21,374" Foreground="White" Grid.RowSpan="2"/>
 
         <Button x:Name="add_book_button" Content="Add book" RenderTransformOrigin="0.496,0.548" Margin="419,0,293,305" Grid.Row="1" Click="add_book_button_Click" Height="32" VerticalAlignment="Bottom"/>
         <Button x:Name="simple_search_button" Content="Search" HorizontalAlignment="Left" Margin="156,52,0,0" VerticalAlignment="Top" Height="33" Width="51" Grid.Row="1" Click="simple_search_button_Click" RenderTransformOrigin="0.518,0.567"/>

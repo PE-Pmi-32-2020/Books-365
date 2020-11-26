@@ -72,5 +72,12 @@ namespace Books365.PL
             addBook.Show();
             this.Visibility = Visibility.Hidden;
         }
+
+        private void user_name_text_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Profile p = new Profile();
+            p.Show();
+            this.Close();
+        }
     }
 }

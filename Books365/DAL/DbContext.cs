@@ -90,7 +90,7 @@ namespace Books365
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-E9SSABQ\\MSSQLSERVER01;Initial Catalog=Books365BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = Books365DB; Trusted_Connection = True; MultipleActiveResultSets = true");
         }
     }
 }

@@ -223,3 +223,8 @@ C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.dll
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.pdb
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.genruntimeconfig.cache
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\AddNotification.g.cs
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Notifications.g.cs
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\AddNotification.baml
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Books365DataGrid.baml
+C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Notifications.baml
