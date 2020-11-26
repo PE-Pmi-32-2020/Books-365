@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Resource Include="PL\Images\book365logo.png" />
-    <Resource Include="PL\Images\logo365.jpg" />
   </ItemGroup>
 
   <ItemGroup>

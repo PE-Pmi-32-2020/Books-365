@@ -35,11 +35,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\EditProfile.xaml">
-	<SubType>Designer</SubType>
-    <Page Update="PL\ForgotPassword.xaml">
-	<SubType>Designer</SubType>
+	    <SubType>Designer</SubType>
     </Page>
-      <SubType>Designer</SubType>
+    <Page Update="PL\ForgotPassword.xaml">
+	    <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\Login.xaml">
       <SubType>Designer</SubType>
