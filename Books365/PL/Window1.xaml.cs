@@ -6,6 +6,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
+
 namespace Books365.PL
 {
     /// <summary>
@@ -16,6 +17,7 @@ namespace Books365.PL
         public Window1()
         {
             InitializeComponent();
+            
             //помилка коли база пуста не використовуй лоад користуйся LINQ
 
             //using (AppContext db = new AppContext())
@@ -23,7 +25,7 @@ namespace Books365.PL
             //    db.Books.Load();
             //    db.ReadingStatuses.Load();
 
-                
+
             //    //BooksGrid.ItemsSource = db.Books.Local.ToBindingList();
             //    var join = from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten };
             //    BooksGrid.ItemsSource = join;

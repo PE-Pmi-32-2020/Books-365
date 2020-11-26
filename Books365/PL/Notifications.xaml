@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Books365.PL"
         mc:Ignorable="d"
-        Title="Notifications" Height="500" Width="800"
+        Title="Notifications" Height="550" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Loaded="OnLoad">
         <Border CornerRadius="10" Grid.RowSpan="2">
             <Border.Background>
                 <LinearGradientBrush>

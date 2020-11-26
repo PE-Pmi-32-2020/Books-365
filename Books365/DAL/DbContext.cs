@@ -28,7 +28,7 @@ namespace Books365
         public string Email { get; set; }
     }
 
-    class Notification
+    public class Notification
     {
         [Key]
         public string Message { get; set; }

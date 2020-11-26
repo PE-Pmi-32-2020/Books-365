@@ -20,7 +20,6 @@ namespace Books365.PL
     
     public partial class AddNotification : Window
     {
-        private Notifications not;
         public AddNotification()
         {
             InitializeComponent();
@@ -40,19 +39,13 @@ namespace Books365.PL
                     Date = date,
                     Email = currentUserEmail
                 });
-                not.Table.Items.Add(new Notification
-                {
-                    Message = message,
-                    Date = date,
-                    Email = currentUserEmail
-                });
+
+                
                 db.SaveChanges();
                 this.Close();
-                
-                //Notifications window = new Notifications();
-                //window.Show();
-                
             }
+            Notifications window = new Notifications();
+            window.Show();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
