@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Books365.BLL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -25,68 +26,16 @@ namespace Books365.PL
 
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
-
-            if (EmailTextBox.Text.Length == 0)
-            {
-                MessageBox.Show("Enter an email", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                EmailTextBox.Focus();
-            }
-            else if (!Regex.IsMatch(EmailTextBox.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
-            {
-                MessageBox.Show("Enter a valid email", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                EmailTextBox.Select(0, EmailTextBox.Text.Length);
-                EmailTextBox.Focus();
-            }
-
-
-            else if (LastNameTextBox.Text.Length == 0)
-            {
-                MessageBox.Show("Enter a LastName", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                LastNameTextBox.Focus();
-            }
-
-            else if (FirstNameTextBox.Text.Length == 0)
-            {
-                MessageBox.Show("Enter a FirstName", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                FirstNameTextBox.Focus();
-            }
-
-            else if (SecretPinTextBox.Text.Length == 0)
-            {
-                MessageBox.Show("Enter a FirstName", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                FirstNameTextBox.Focus();
-            }
-            else if (!Regex.IsMatch(SecretPinTextBox.Text, @"^\d{4}$"))
-            {
-                MessageBox.Show("Secret pin must contain 4 numbers", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                SecretPinTextBox.Select(0, EmailTextBox.Text.Length);
-                SecretPinTextBox.Focus();
-            }
-            else if (PasswordTextBox.Password.Length == 0)
-            {
-                MessageBox.Show("Enter a Password", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                PasswordTextBox.Focus();
-            }
-            else if (!Regex.IsMatch(PasswordTextBox.Password, @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,30}"))
-            {
-                MessageBox.Show("Password must contain \n" +
-                    "At least one digit [0-9] \n" +
-                    "At least one lowercase character[a - z]\n" +
-                    "At least one uppercase character[A - Z]\n" +
-                    "At least 6 characters in length, but no more than 30.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                PasswordTextBox.Focus();
-            }
-
-            else if (ConfirmPasswordTextBox.Password.Length == 0)
-            {
-                MessageBox.Show("Enter a ConfirmPassword", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                ConfirmPasswordTextBox.Focus();
-            }
-            else if (PasswordTextBox.Password != ConfirmPasswordTextBox.Password)
-            {
-                MessageBox.Show("Confirm password must be same as password.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning); ;
-                ConfirmPasswordTextBox.Focus();
-            }
+            Validator validator = new Validator();
+            if (validator.IsEmpty(EmailTextBox) ||
+            !validator.EmailIsCorrect(EmailTextBox) ||
+            validator.IsEmpty(LastNameTextBox) ||
+            validator.IsEmpty(FirstNameTextBox) ||
+            validator.IsEmpty(SecretPinTextBox) ||
+            !validator.SecretPinIsCorrect(SecretPinTextBox) ||
+            !validator.PasswordIsCorrect(PasswordTextBox) ||
+            !validator.PasswordIsCorrect(ConfirmPasswordTextBox) ||
+            !validator.ConfirmIsSame(ConfirmPasswordTextBox, PasswordTextBox)) { }
             else
             {
                 using (AppContext db = new AppContext())
@@ -112,6 +61,76 @@ namespace Books365.PL
                 }
             }
             
+        }
+
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void EmailTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (EmailTextBox.Text == "Email")
+            {
+
+                EmailTextBox.Text = "";
+
+            }
+        }
+
+        private void FirstNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (FirstNameTextBox.Text == "FirstName")
+            {
+
+                FirstNameTextBox.Text = "";
+
+            }
+        }
+
+        private void LastNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (LastNameTextBox.Text == "LastName")
+            {
+
+                LastNameTextBox.Text = "";
+
+            }
+        }
+
+        private void PasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (PasswordTextBox.Password.ToString() == "Password")
+            {
+
+                PasswordTextBox.Password = "";
+
+            }
+        }
+
+        private void ConfirmPasswordTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (ConfirmPasswordTextBox.Password.ToString() == "Password")
+            {
+
+                ConfirmPasswordTextBox.Password = "";
+
+            }
+        }
+
+        private void SecretPinTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (SecretPinTextBox.Text == "SecretPin")
+            {
+
+                SecretPinTextBox.Text = "";
+
+            }
         }
     }
 }

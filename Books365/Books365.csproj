@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="PL\Images\book365logo.png" />
     <None Remove="PL\Images\logo365.jpg" />
+    <None Remove="PL\Images\Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,10 @@
   <ItemGroup>
     <Resource Include="PL\Images\book365logo.png" />
     <Resource Include="PL\Images\logo365.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="PL\Images\Logo.png" />
   </ItemGroup>
 
 </Project>

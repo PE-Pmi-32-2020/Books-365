@@ -36,7 +36,7 @@ namespace Books365
         public DateTime Date { get; set; }
     }
 
-    class User
+    public class User
     {
         [MaxLength(50)]
         public string FirstName { get; set; }

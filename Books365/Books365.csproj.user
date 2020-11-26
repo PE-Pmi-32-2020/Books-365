@@ -6,6 +6,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\EditProfile.xaml.cs">
+	<SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PL\ForgotPassword.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PL\Login.xaml.cs">
@@ -32,6 +35,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\EditProfile.xaml">
+	<SubType>Designer</SubType>
+    <Page Update="PL\ForgotPassword.xaml">
+	<SubType>Designer</SubType>
+    </Page>
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PL\Login.xaml">
