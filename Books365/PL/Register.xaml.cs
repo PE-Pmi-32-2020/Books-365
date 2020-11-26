@@ -32,6 +32,7 @@ namespace Books365.PL
             validator.IsEmpty(LastNameTextBox) ||
             validator.IsEmpty(FirstNameTextBox) ||
             validator.IsEmpty(SecretPinTextBox) ||
+            validator.EmailExists(EmailTextBox) ||
             !validator.SecretPinIsCorrect(SecretPinTextBox) ||
             !validator.PasswordIsCorrect(PasswordTextBox) ||
             !validator.PasswordIsCorrect(ConfirmPasswordTextBox) ||

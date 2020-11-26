@@ -65,18 +65,20 @@ namespace Books365.PL
                 Total.Text += totalpages.ToString();
                 Booksfinished.Text += booksRead.Count().ToString();
 
-                var nameGroup = readAuthors.GroupBy(x => x);
-                var maxCount = nameGroup.Max(g => g.Count());
-                var mostCommons = nameGroup.Where(x => x.Count() == maxCount).Select(x => x.Key).ToArray();
-                if (mostCommons.Length < 3)
-                {
-                    foreach (var item in mostCommons)
-                    {
-                        favouriteautor.Text += item.ToString() + " ";
-                    }
-                }
-                else
-                    favouriteautor.Text += "Wow. A lot of Authors to Like";
+                //Баг з максимальним значенням коли воно 0 - помилка
+
+                //var nameGroup = readAuthors.GroupBy(x => x);
+                //var maxCount = nameGroup.Max(g => g.Count());
+                //var mostCommons = nameGroup.Where(x => x.Count() == maxCount).Select(x => x.Key).ToArray();
+                //if (mostCommons.Length < 3)
+                //{
+                //    foreach (var item in mostCommons)
+                //    {
+                //        favouriteautor.Text += item.ToString() + " ";
+                //    }
+                //}
+                //else
+                //    favouriteautor.Text += "Wow. A lot of Authors to Like";
                 
 
             }
@@ -85,11 +87,15 @@ namespace Books365.PL
 
         private void Edit_Profile_Click(object sender, RoutedEventArgs e)
         {
-
+            EditProfile editProfile = new EditProfile();
+            editProfile.Show();
+            this.Close();
         }
         private void Main_Menu_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 window1 = new Window1();
+            window1.Show();
+            this.Close();
         }
     }
 }

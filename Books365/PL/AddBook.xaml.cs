@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -23,7 +24,7 @@ namespace Books365.PL
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonAddBook_Click(object sender, RoutedEventArgs e)
         {
             if (TitleText.Text.Length == 0)
             {
@@ -64,12 +65,19 @@ namespace Books365.PL
                     });
 
                     db.SaveChanges();
-                    Window1 w1 = new Window1();
-                    w1.Show();
+                    Application.Current.Windows.OfType<Window>().
+                    Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
                     this.Close();
 
                 }
             }
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Windows.OfType<Window>().
+            Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
+            this.Close();
         }
     }
 }

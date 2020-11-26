@@ -16,20 +16,22 @@ namespace Books365.PL
         public Window1()
         {
             InitializeComponent();
-            using (AppContext db = new AppContext())
-            {
-                db.Books.Load();
-                db.ReadingStatuses.Load();
+            //помилка коли база пуста не використовуй лоад користуйся LINQ
+
+            //using (AppContext db = new AppContext())
+            //{
+            //    db.Books.Load();
+            //    db.ReadingStatuses.Load();
 
                 
-                //BooksGrid.ItemsSource = db.Books.Local.ToBindingList();
-                var join = from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten };
-                BooksGrid.ItemsSource = join;
-                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
-                var Registered_user = db.Users
-                                      .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
-                user_name_text_block.Text = Registered_user.FirstName + " " + Registered_user.LastName;
-            }
+            //    //BooksGrid.ItemsSource = db.Books.Local.ToBindingList();
+            //    var join = from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten };
+            //    BooksGrid.ItemsSource = join;
+            //    var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
+            //    var Registered_user = db.Users
+            //                          .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
+            //    user_name_text_block.Text = Registered_user.FirstName + " " + Registered_user.LastName;
+            //}
         }
 
         private void notifications_button_Click(object sender, RoutedEventArgs e)
@@ -59,11 +61,13 @@ namespace Books365.PL
             using (AppContext db = new AppContext())
             {
                 db.EmailCurrentUser.Remove(db.EmailCurrentUser.FirstOrDefault());
+                db.SaveChanges();
             }
+            
 
-            this.Close();
             Login login = new Login();
             login.Show();
+            this.Close();
         }
 
         private void add_book_button_Click(object sender, RoutedEventArgs e)
@@ -78,6 +82,16 @@ namespace Books365.PL
             Profile p = new Profile();
             p.Show();
             this.Close();
+        }
+
+        private void user_name_text_block_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            user_name_text_block.Opacity = 0.5;
+        }
+
+        private void user_name_text_block_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            user_name_text_block.Opacity = 1;
         }
     }
 }

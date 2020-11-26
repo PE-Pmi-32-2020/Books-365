@@ -32,8 +32,8 @@ namespace Books365.PL
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            Window w = new Window();
-            w.Show();
+            Window1 w1 = new Window1();
+            w1.Show();
             this.Close();
            
         }

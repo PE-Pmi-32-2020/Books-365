@@ -44,17 +44,15 @@ namespace Books365.PL
                 }
                 if (Registered_user_email != null && Registered_user_password != null)
                 {
-                    MessageBox.Show(Registered_user_email.Email.ToString());
                     db.EmailCurrentUser.Add(new EmailOfCurrentUser
                     {
                         Email = EmailTextBox.Text.ToString()
                     }
-
                         );
                     db.SaveChanges();
-                    this.Close();
                     Window1 w1 = new Window1();
                     w1.Show();
+                    this.Close();
                 }
             }
         }

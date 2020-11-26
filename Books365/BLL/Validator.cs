@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -36,6 +37,21 @@ namespace Books365.BLL
                 return false;
             }
             return true;
+        }
+        public bool EmailExists(TextBox Email)
+        {
+            using (AppContext db = new AppContext())
+            {
+                var Registered_user_email = db.Users
+                       .Where(u => u.Email == Email.Text.ToString()).FirstOrDefault();
+                if (Registered_user_email != null)
+                {
+                    MessageBox.Show("Email already exists!", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return true;
+                }
+                else
+                    return false;
+            }
         }
 
         public bool EmailIsCorrect(TextBox email)
