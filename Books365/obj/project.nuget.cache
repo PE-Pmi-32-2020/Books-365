@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AVvuEo0hVCSV4VT3WUvztMAN85yRgPyZ5MuK06o5YO7AQDaIweU64KwXSEQRi/96zv+WCIcfnoq+wfIE37VCjA==",
+  "dgSpecHash": "rgo0TXLLE7i8QEc79cBSwhKEDPY9n052kTsdCfHMrbP8K68l+0qjXRR4k6CVmTLflJIcgwoElHpj39aal1/WSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\Books365.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\Kyryl\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Kyryl\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Kyryl\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Kyryl\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
     "C:\\Users\\Kyryl\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Kyryl\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Kyryl\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

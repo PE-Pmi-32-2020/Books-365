@@ -218,7 +218,6 @@ C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\PL\Window1.baml
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.g.resources
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.AssemblyInfoInputs.cache
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.AssemblyInfo.cs
-C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj.CoreCompileInputs.cache
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj.CopyComplete
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.dll
 C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.pdb
@@ -228,3 +227,4 @@ C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Notif
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\AddNotification.baml
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Books365DataGrid.baml
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Notifications.baml
+C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\Books365.csproj.CoreCompileInputs.cache

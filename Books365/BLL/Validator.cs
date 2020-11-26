@@ -115,8 +115,10 @@ namespace Books365.BLL
                 SecretPin.Focus();
                 return false;
             }
+
             return true;
         }
+
         public bool YearIsValid(TextBox YearText)
         {
             if (!int.TryParse(YearText.Text, out int res))
