@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\
+C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\
 Books365
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Volod\source\repos\Book365git\Books365\App.xaml
+C:\Users\Kyryl\Desktop\Books365\Books365\App.xaml
 12-2121446375
 
 231912614317
-221438387523
+221299542802
 MainWindow.xaml;PL\AddBook.xaml;PL\AddNotification.xaml;PL\Books365Button.xaml;PL\Books365DataGrid.xaml;PL\EditProfile.xaml;PL\ForgotPassword.xaml;PL\Login.xaml;PL\Notifications.xaml;PL\Profile.xaml;PL\Register.xaml;PL\Window1.xaml;
 
 False

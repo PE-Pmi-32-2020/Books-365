@@ -27,6 +27,15 @@ namespace Books365.PL
             InitializeComponent();
             Func();
         }
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
         void Func()
         {
             using (AppContext db = new AppContext())
@@ -66,20 +75,22 @@ namespace Books365.PL
                 Booksfinished.Text += booksRead.Count().ToString();
 
                 //Баг з максимальним значенням коли воно 0 - помилка
+                if (readAuthors.Length != 0)
+                {
+                    var nameGroup = readAuthors.GroupBy(x => x);
+                    var maxCount = nameGroup.Max(g => g.Count());
+                    var mostCommons = nameGroup.Where(x => x.Count() == maxCount).Select(x => x.Key).ToArray();
+                    if (mostCommons.Length < 3)
+                    {
+                        foreach (var item in mostCommons)
+                        {
+                            favouriteautor.Text += item.ToString() + " ";
+                        }
+                    }
+                    else
+                        favouriteautor.Text += "Wow. A lot of Authors to Like";
+                }
 
-                //var nameGroup = readAuthors.GroupBy(x => x);
-                //var maxCount = nameGroup.Max(g => g.Count());
-                //var mostCommons = nameGroup.Where(x => x.Count() == maxCount).Select(x => x.Key).ToArray();
-                //if (mostCommons.Length < 3)
-                //{
-                //    foreach (var item in mostCommons)
-                //    {
-                //        favouriteautor.Text += item.ToString() + " ";
-                //    }
-                //}
-                //else
-                //    favouriteautor.Text += "Wow. A lot of Authors to Like";
-                
 
             }
            
@@ -89,7 +100,7 @@ namespace Books365.PL
         {
             EditProfile editProfile = new EditProfile();
             editProfile.Show();
-            this.Close();
+            this.Visibility = Visibility.Hidden;
         }
         private void Main_Menu_Click(object sender, RoutedEventArgs e)
         {

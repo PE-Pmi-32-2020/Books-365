@@ -8,7 +8,9 @@
         Title="Notifications" Height="450" Width="800"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+    
     <Grid>
+        
         <Border CornerRadius="10" Grid.RowSpan="2">
             <Border.Background>
                 <LinearGradientBrush>
@@ -21,7 +23,7 @@
 
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="94" Margin="10" >
-            <Image Source="Images/logo365.jpg" Width="80"  Margin="10" HorizontalAlignment="Left"/>
+            <Image Source="Images/book365logo.png" Width="80"  Margin="10" HorizontalAlignment="Left"/>
             <Button x:Name="Back" Content="Back to Library" Width="150" Height="50" TextElement.FontSize="18" Margin="50 0 0 0" HorizontalAlignment="Right" Click="Back_Click"/>
             <Button Content="+ Add" Width="150" Height="50" TextElement.FontSize="18"  Margin="300 0 0 0" HorizontalAlignment="Right" Click="Button_Click"/>
         </StackPanel>

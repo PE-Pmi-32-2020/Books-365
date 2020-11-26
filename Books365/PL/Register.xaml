@@ -36,7 +36,7 @@
             </Button>
         </StackPanel>
         <StackPanel VerticalAlignment="Center">
-            <Image Source="Images/Logo.png" Width="80" Margin="10" HorizontalAlignment="Center"/>
+            <Image Source="Images/book365logo.png" Width="80" Margin="10" HorizontalAlignment="Center"/>
             <TextBlock
                 Text="Books 365"
                        FontWeight="Light"

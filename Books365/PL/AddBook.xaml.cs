@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Books365.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,31 +27,9 @@ namespace Books365.PL
 
         private void ButtonAddBook_Click(object sender, RoutedEventArgs e)
         {
-            if (TitleText.Text.Length == 0)
-            {
-                MessageBox.Show("Enter Book Title", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                TitleText.Focus();
-            }
-            else if (YearText.Text.Length == 0)
-            {
-                MessageBox.Show("Enter Book Year", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                YearText.Focus();
-            }
-            else if (!int.TryParse(YearText.Text, out int res))
-            {
-                MessageBox.Show("Enter Valid Year", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                YearText.Focus();
-            }
-            else if(Convert.ToInt32(YearText.Text)>2050 || Convert.ToInt32(YearText.Text) < 1)
-            {
-                MessageBox.Show("Enter Valid Year", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                YearText.Focus();
-            }
-            else if (AuthorText.Text.Length == 0)
-            {
-                MessageBox.Show("Enter Author", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                AuthorText.Focus();
-            }
+            Validator validator = new Validator();
+            if (validator.IsEmpty(TitleText) || validator.IsEmpty(YearText) 
+                || !validator.YearIsValid(YearText) || validator.IsEmpty(AuthorText)) { }
             else
             {
                 using (AppContext db = new AppContext())

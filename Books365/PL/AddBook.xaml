@@ -16,13 +16,13 @@
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,10,0,-10">
-        <Border.Background>
-            <LinearGradientBrush>
-                <!--#ba5370 → #f4e2d8-->
-                <GradientStop Color="#ba5370" Offset="0.0"/>
-                <GradientStop Color="#f4e2d8" Offset="1.0"/>
-            </LinearGradientBrush>
-        </Border.Background>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <!--#ba5370 → #f4e2d8-->
+                    <GradientStop Color="#ba5370" Offset="0.0"/>
+                    <GradientStop Color="#f4e2d8" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
         </Border>
         <StackPanel VerticalAlignment="Center">
             <Image Source="Images/book365logo.png" Width="80" Margin="10" HorizontalAlignment="Center"/>

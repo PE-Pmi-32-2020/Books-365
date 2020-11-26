@@ -117,6 +117,22 @@ namespace Books365.BLL
             }
             return true;
         }
+        public bool YearIsValid(TextBox YearText)
+        {
+            if (!int.TryParse(YearText.Text, out int res))
+            {
+                MessageBox.Show("Enter Int Year", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                YearText.Focus();
+                return false;
+            }
+            else if (Convert.ToInt32(YearText.Text) > 2050 || Convert.ToInt32(YearText.Text) < -500)
+            {
+                MessageBox.Show("Enter Valid Year", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                YearText.Focus();
+                return false;
+            }
+            return true;
+        }
        
 
 
