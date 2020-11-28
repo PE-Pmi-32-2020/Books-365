@@ -2155,6 +2155,27 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ToastNotifications/2.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ToastNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ToastNotifications.dll": {}
+        }
+      },
+      "ToastNotifications.Messages/2.5.1": {
+        "type": "package",
+        "dependencies": {
+          "ToastNotifications": "2.5.1"
+        },
+        "compile": {
+          "lib/net40/ToastNotifications.Messages.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ToastNotifications.Messages.dll": {}
+        }
       }
     }
   },
@@ -7444,6 +7465,31 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ToastNotifications/2.5.1": {
+      "sha512": "0ZBWG0FCPafwbIzNhjWgC0GEOyk51GF3rYWrh5QJ61ZxDEoLgdDsEUt8HMxYN7lRLVt/mWhtgdbe4OmhXfwtkA==",
+      "type": "package",
+      "path": "toastnotifications/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/ToastNotifications.dll",
+        "readme.txt",
+        "toastnotifications.2.5.1.nupkg.sha512",
+        "toastnotifications.nuspec"
+      ]
+    },
+    "ToastNotifications.Messages/2.5.1": {
+      "sha512": "KG4oMi61ShmRuPK3/yAFhUph/rZGYmS8IcsIvF2Fk3np11fQo6ZjdK2XUmFnY9b0oQY9IilxhCmOdVGoOGEeHQ==",
+      "type": "package",
+      "path": "toastnotifications.messages/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/ToastNotifications.Messages.dll",
+        "toastnotifications.messages.2.5.1.nupkg.sha512",
+        "toastnotifications.messages.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -7454,35 +7500,41 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
       "OxyPlot.Wpf >= 2.0.0",
       "StyleCop.Analyzers >= 1.1.118"
+      "ToastNotifications >= 2.5.1",
+      "ToastNotifications.Messages >= 2.5.1"
+      "Microsoft.EntityFrameworkCore >= 3.1.9",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.9",
+      "OxyPlot.Wpf >= 2.0.0",
+      "ToastNotifications >= 2.5.1",
+      "ToastNotifications.Messages >= 2.5.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Volod\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
+      "projectUniqueName": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\PMI_32_Books365\\Books365\\Books365.csproj",
       "projectName": "Books365",
-      "projectPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
-      "packagesPath": "C:\\Users\\Volod\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\obj\\",
+      "projectPath": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\PMI_32_Books365\\Books365\\Books365.csproj",
+      "packagesPath": "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\PMI_32_Books365\\Books365\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Volod\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Vovchyk Halamaha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.intenselab.net:8445/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7526,6 +7578,13 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.1.118, )"
+          "ToastNotifications": {
+            "target": "Package",
+            "version": "[2.5.1, )"
+          },
+          "ToastNotifications.Messages": {
+            "target": "Package",
+            "version": "[2.5.1, )"
           }
         },
         "imports": [
@@ -7549,5 +7608,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ToastNotifications 2.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "ToastNotifications",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ToastNotifications.Messages 2.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "ToastNotifications.Messages",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
