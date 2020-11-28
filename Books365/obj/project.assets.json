@@ -7499,35 +7499,25 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
       "OxyPlot.Wpf >= 2.0.0",
-      "StyleCop.Analyzers >= 1.1.118"
-      "ToastNotifications >= 2.5.1",
-      "ToastNotifications.Messages >= 2.5.1"
-      "Microsoft.EntityFrameworkCore >= 3.1.9",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.9",
-      "OxyPlot.Wpf >= 2.0.0",
+      "StyleCop.Analyzers >= 1.1.118",
       "ToastNotifications >= 2.5.1",
       "ToastNotifications.Messages >= 2.5.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kyryl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\PMI_32_Books365\\Books365\\Books365.csproj",
+      "projectUniqueName": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\Books365.csproj",
       "projectName": "Books365",
-      "projectPath": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\PMI_32_Books365\\Books365\\Books365.csproj",
-      "packagesPath": "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\PMI_32_Books365\\Books365\\obj\\",
+      "projectPath": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\Books365.csproj",
+      "packagesPath": "C:\\Users\\Kyryl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Vovchyk Halamaha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kyryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7578,6 +7568,7 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.1.118, )"
+          },
           "ToastNotifications": {
             "target": "Package",
             "version": "[2.5.1, )"
@@ -7605,7 +7596,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   },

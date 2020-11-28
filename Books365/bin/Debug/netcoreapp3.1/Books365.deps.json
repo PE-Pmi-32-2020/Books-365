@@ -13,7 +13,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0",
           "OxyPlot.Wpf": "2.0.0",
-          "StyleCop.Analyzers": "1.1.118"
+          "StyleCop.Analyzers": "1.1.118",
           "ToastNotifications": "2.5.1",
           "ToastNotifications.Messages": "2.5.1"
         },
