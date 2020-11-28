@@ -74,5 +74,56 @@
                 });
             }
         }
+
+        public void AddBook(TextBox titleText, TextBox yearText, TextBox authorText)
+        {
+            using (Books365.AppContext db = new Books365.AppContext())
+            {
+
+                db.Books.Add(new Book
+                {
+                    Title = titleText.Text,
+                    Year = Convert.ToInt32(yearText.Text),
+                    Author = authorText.Text,
+                });
+
+                db.SaveChanges();
+            }
+        }
+
+        public void EditProfile(TextBox firstNameTextBox, TextBox lastNameTextBox, PasswordBox passwordTextBox, PasswordBox confirmPasswordTextBox, TextBox secretPinTextBox)
+        {
+            using (Books365.AppContext db = new Books365.AppContext())
+            {
+                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
+                var registered_user = db.Users
+                                      .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
+                firstNameTextBox.Text = registered_user.FirstName;
+                lastNameTextBox.Text = registered_user.LastName;
+                passwordTextBox.Password = registered_user.Password;
+                confirmPasswordTextBox.Password = registered_user.Password;
+                secretPinTextBox.Text = registered_user.SecretPin.ToString();
+            }
+        }
+
+        public bool ChangePassword(string email, TextBox secretPinTextBox, TextBox newPasswordTextBox)
+        {
+            using (Books365.AppContext db = new Books365.AppContext())
+            {
+                var registered_user_email = db.Users
+                        .Where(u => u.Email == email).FirstOrDefault();
+                var registered_user_pin = db.Users.Where(u => u.SecretPin == int.Parse(secretPinTextBox.Text.ToString()) && u.Email == registered_user_email.Email).FirstOrDefault();
+                if (registered_user_pin == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    Books365.User u = db.Users.Single(u => u.Email == email);
+                    u.Password = newPasswordTextBox.Text;
+                    db.SaveChanges();
+                    return true;
+                }
+            }
     }
 }

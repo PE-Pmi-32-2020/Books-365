@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Books365.PL"
         mc:Ignorable="d"
         AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" ResizeMode="NoResize"
+        WindowStyle="None"
         Title="ShowBooks" Height="450" Width="800"
         Icon="/PL/Images/bicon.ico">
     

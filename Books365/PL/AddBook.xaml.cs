@@ -32,23 +32,11 @@ namespace Books365.PL
                 || !validator.YearIsValid(YearText) || validator.IsEmpty(AuthorText)) { }
             else
             {
-                using (AppContext db = new AppContext())
-                {
-
-                    db.Books.Add(new Book
-                    {
-                        Title = TitleText.Text,
-                        Year = Convert.ToInt32(YearText.Text),
-                        Author = AuthorText.Text
-
-                    });
-
-                    db.SaveChanges();
-                    Application.Current.Windows.OfType<Window>().
-                    Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
-                    this.Close();
-
-                }
+                Books365.BLL.User u = new Books365.BLL.User();
+                u.AddBook(this.TitleText, this.YearText, this.AuthorText);
+                Application.Current.Windows.OfType<Window>().
+                Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
+                this.Close();
             }
         }
 

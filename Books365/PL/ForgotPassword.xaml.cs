@@ -48,35 +48,28 @@ namespace Books365.PL
 
         private void Button_Click_Submit(object sender, RoutedEventArgs e)
         {
-            using (AppContext db = new AppContext())
+            Validator validator = new Validator();
+            if (validator.IsEmpty(this.SecretPinTextBox) ||
+                !validator.SecretPinIsCorrect(this.SecretPinTextBox) ||
+                validator.IsEmpty(this.NewPasswordTextBox) ||
+                validator.IsEmpty(this.NewPasswordConfirmTextBox) ||
+                !validator.PasswordIsCorrect(this.NewPasswordTextBox) ||
+                !validator.ConfirmIsSame(this.NewPasswordConfirmTextBox, this.NewPasswordTextBox))
             {
-                Validator validator = new Validator();
-                if (validator.IsEmpty(this.SecretPinTextBox) ||
-                    !validator.SecretPinIsCorrect(this.SecretPinTextBox) ||
-                    validator.IsEmpty(this.NewPasswordTextBox) ||
-                    validator.IsEmpty(this.NewPasswordConfirmTextBox) ||
-                    !validator.PasswordIsCorrect(this.NewPasswordTextBox) ||
-                    !validator.ConfirmIsSame(this.NewPasswordConfirmTextBox, this.NewPasswordTextBox))
+            }
+            else
+            {
+                Books365.BLL.User u = new Books365.BLL.User();
+                bool answer = u.ChangePassword(this.Email, this.SecretPinTextBox, this.NewPasswordTextBox);
+                if (!answer)
                 {
+                    MessageBox.Show("Wrong secret pin or email", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {
-                    var registered_user_email = db.Users
-                           .Where(u => u.Email == this.Email).FirstOrDefault();
-                    var registered_user_pin = db.Users.Where(u => u.SecretPin == int.Parse(this.SecretPinTextBox.Text.ToString()) && u.Email == registered_user_email.Email).FirstOrDefault();
-                    if (registered_user_pin == null)
-                    {
-                        MessageBox.Show("Wrong secret pin or email", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    else
-                    {
-                        User u = db.Users.Single(u => u.Email == Email);
-                        u.Password = NewPasswordTextBox.Text;
-                        db.SaveChanges();
-                        this.Close();
-                        Window1 w1 = new Window1();
-                        w1.Show();
-                    }
+                    this.Close();
+                    Window1 w1 = new Window1();
+                    w1.Show();
                 }
             }
         }
