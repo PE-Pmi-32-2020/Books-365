@@ -1,17 +1,6 @@
 ﻿using Books365.BLL;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Books365.PL
 {
@@ -22,14 +11,16 @@ namespace Books365.PL
     {
         public AddBook()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void ButtonAddBook_Click(object sender, RoutedEventArgs e)
         {
             Validator validator = new Validator();
-            if (validator.IsEmpty(TitleText) || validator.IsEmpty(YearText) 
-                || !validator.YearIsValid(YearText) || validator.IsEmpty(AuthorText)) { }
+            if (validator.IsEmpty(this.TitleText) || validator.IsEmpty(this.YearText)
+                || !validator.YearIsValid(this.YearText) || validator.IsEmpty(this.AuthorText))
+            {
+            }
             else
             {
                 Books365.BLL.User u = new Books365.BLL.User();

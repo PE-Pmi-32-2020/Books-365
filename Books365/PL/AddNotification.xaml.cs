@@ -16,34 +16,31 @@ namespace Books365.PL
 {
     /// <summary>
     /// Interaction logic for AddNotification.xaml
-    /// </summary>  
-    
+    /// </summary>
     public partial class AddNotification : Window
     {
         public AddNotification()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-           
             using (AppContext db = new AppContext())
             {
-                var date = Convert.ToDateTime(Picker.Text);
-                var message = Message.Text.ToString();
+                var date = Convert.ToDateTime(this.Picker.Text);
+                var message = this.Message.Text.ToString();
                 var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
                 db.Notifications.Add(new Notification
                 {
                     Message = message,
                     Date = date,
-                    Email = currentUserEmail
+                    Email = currentUserEmail,
                 });
-
-                
                 db.SaveChanges();
                 this.Close();
             }
+
             Notifications window = new Notifications();
             window.Show();
         }

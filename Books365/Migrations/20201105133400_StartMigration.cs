@@ -15,7 +15,7 @@ namespace Books365.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(maxLength: 50, nullable: true),
                     Year = table.Column<int>(maxLength: 4, nullable: false),
-                    Author = table.Column<string>(maxLength: 50, nullable: true)
+                    Author = table.Column<string>(maxLength: 50, nullable: true),
                 },
                 constraints: table =>
                 {
@@ -28,7 +28,7 @@ namespace Books365.Migrations
                 {
                     Message = table.Column<string>(nullable: true),
                     Email = table.Column<string>(maxLength: 50, nullable: true),
-                    Date = table.Column<DateTime>(nullable: false)
+                    Date = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -43,7 +43,7 @@ namespace Books365.Migrations
                     PagesWritten = table.Column<int>(nullable: false),
                     StartOfReading = table.Column<DateTime>(nullable: false),
                     Rating = table.Column<double>(maxLength: 3, nullable: false),
-                    BookStatus = table.Column<string>(nullable: true)
+                    BookStatus = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -57,7 +57,7 @@ namespace Books365.Migrations
                     FirstName = table.Column<string>(maxLength: 50, nullable: true),
                     LastName = table.Column<string>(maxLength: 50, nullable: true),
                     Password = table.Column<string>(maxLength: 30, nullable: true),
-                    SecretPin = table.Column<int>(maxLength: 4, nullable: false)
+                    SecretPin = table.Column<int>(maxLength: 4, nullable: false),
                 },
                 constraints: table =>
                 {

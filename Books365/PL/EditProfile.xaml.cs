@@ -12,7 +12,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Books365.BLL;
 
-
 namespace Books365.PL
 {
     /// <summary>
@@ -22,9 +21,10 @@ namespace Books365.PL
     {
         public EditProfile()
         {
-            InitializeComponent();
-            EditProfileFunc();
+            this.InitializeComponent();
+            this.EditProfileFunc();
         }
+
         private void Button_Click_Minimize(object sender, RoutedEventArgs e)
         {
             SystemCommands.MinimizeWindow(this);
@@ -50,26 +50,27 @@ namespace Books365.PL
                                       .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
                 Validator validator = new Validator();
                 if (
-                validator.IsEmpty(LastNameTextBox) ||
-                validator.IsEmpty(FirstNameTextBox) ||
-                validator.IsEmpty(SecretPinTextBox) ||
-                !validator.SecretPinIsCorrect(SecretPinTextBox) ||
-                !validator.PasswordIsCorrect(PasswordTextBox) ||
-                !validator.PasswordIsCorrect(ConfirmPasswordTextBox) ||
-                !validator.ConfirmIsSame(ConfirmPasswordTextBox, PasswordTextBox)) { }
+                validator.IsEmpty(this.LastNameTextBox) ||
+                validator.IsEmpty(this.FirstNameTextBox) ||
+                validator.IsEmpty(this.SecretPinTextBox) ||
+                !validator.SecretPinIsCorrect(this.SecretPinTextBox) ||
+                !validator.PasswordIsCorrect(this.PasswordTextBox) ||
+                !validator.PasswordIsCorrect(this.ConfirmPasswordTextBox) ||
+                !validator.ConfirmIsSame(this.ConfirmPasswordTextBox, this.PasswordTextBox))
+                {
+                }
                 else
                 {
-                    registered_user.FirstName = FirstNameTextBox.Text;
-                    registered_user.LastName = LastNameTextBox.Text;
-                    registered_user.Password = PasswordTextBox.Password;
-                    registered_user.Password = ConfirmPasswordTextBox.Password;
-                    registered_user.SecretPin = Convert.ToInt32(SecretPinTextBox.Text);
+                    registered_user.FirstName = this.FirstNameTextBox.Text;
+                    registered_user.LastName = this.LastNameTextBox.Text;
+                    registered_user.Password = this.PasswordTextBox.Password;
+                    registered_user.Password = this.ConfirmPasswordTextBox.Password;
+                    registered_user.SecretPin = Convert.ToInt32(this.SecretPinTextBox.Text);
                     db.SaveChanges();
                     Application.Current.Windows.OfType<Window>().
                     Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
                     this.Close();
                 }
-
             }
         }
 

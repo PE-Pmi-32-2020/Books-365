@@ -30,7 +30,6 @@
         /// GFDGD FGDF GDF
         public bool Login(TextBox text, PasswordBox password)
         {
-
             using (Books365.AppContext db = new Books365.AppContext())
             {
                 var registered_user_email = db.Users
@@ -79,7 +78,6 @@
         {
             using (Books365.AppContext db = new Books365.AppContext())
             {
-
                 db.Books.Add(new Book
                 {
                     Title = titleText.Text,

@@ -11,7 +11,7 @@ namespace Books365.Migrations
 {
     [DbContext(typeof(AppContext))]
     [Migration("20201106155025_v2")]
-    partial class v2
+    partial class V2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

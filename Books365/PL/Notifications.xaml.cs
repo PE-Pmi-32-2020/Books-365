@@ -21,17 +21,16 @@ namespace Books365.PL
     /// <summary>
     /// Interaction logic for Notifications.xaml
     /// </summary>
-    
-
     public partial class Notifications : Window
     {
-        public ObservableCollection<Notification> Messages{ get; set; }
+        public ObservableCollection<Notification> Messages { get; set; }
+
         public Notifications()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        Notifier notifier = new Notifier(cfg =>
+        private readonly Notifier notifier = new Notifier(cfg =>
         {
             cfg.PositionProvider = new WindowPositionProvider(
                 parentWindow: Application.Current.MainWindow,
@@ -46,7 +45,7 @@ namespace Books365.PL
             cfg.Dispatcher = Application.Current.Dispatcher;
         });
 
-        void OnLoad(object sender, RoutedEventArgs e)
+        private void OnLoad(object sender, RoutedEventArgs e)
         {
             using (AppContext db = new AppContext())
             {
@@ -57,14 +56,14 @@ namespace Books365.PL
                 {
                     if (Convert.ToDateTime(item.Date) == DateTime.Now.Date)
                     {
-                        notifier.ShowInformation($"{item.Message}\n{item.Date}");
+                        this.notifier.ShowInformation($"{item.Message}\n{item.Date}");
                     }
                 }
             }
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
             AddNotification notification = new AddNotification();
             notification.Show();
             this.Hide();
@@ -75,13 +74,12 @@ namespace Books365.PL
             Window1 w1 = new Window1();
             w1.Show();
             this.Close();
-           
         }
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            Notification notification = Table.SelectedItem as Notification;
-            Messages.Remove(notification);
+            Notification notification = this.Table.SelectedItem as Notification;
+            this.Messages.Remove(notification);
         }
 
         private void Load_Table(object sender, RoutedEventArgs e)
@@ -90,16 +88,15 @@ namespace Books365.PL
             {
                 var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
                 var notifications = db.Notifications.Where(u => u.Email == currentUserEmail).ToList();
-                Messages = new ObservableCollection<Notification>();
+                this.Messages = new ObservableCollection<Notification>();
 
                 foreach (var item in notifications)
                 {
-                    Messages.Add(item);
+                    this.Messages.Add(item);
                 }
 
-                Table.ItemsSource = Messages;
+                this.Table.ItemsSource = this.Messages;
             }
-            
         }
     }
 }

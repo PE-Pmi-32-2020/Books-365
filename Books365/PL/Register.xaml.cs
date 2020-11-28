@@ -36,7 +36,9 @@
             !validator.SecretPinIsCorrect(this.SecretPinTextBox) ||
             !validator.PasswordIsCorrect(this.PasswordTextBox) ||
             !validator.PasswordIsCorrect(this.ConfirmPasswordTextBox) ||
-            !validator.ConfirmIsSame(this.ConfirmPasswordTextBox, this.PasswordTextBox)) { }
+            !validator.ConfirmIsSame(this.ConfirmPasswordTextBox, this.PasswordTextBox))
+            {
+            }
             else
             {
                 Books365.BLL.User user = new Books365.BLL.User();

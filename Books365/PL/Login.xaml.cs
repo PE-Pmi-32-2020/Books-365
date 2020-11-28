@@ -17,20 +17,19 @@ namespace Books365.PL
     /// Interaction logic for Login.xaml
     /// </summary>
     public partial class Login : Window
-    { 
+    {
         public Login()
         {
             this.InitializeComponent();
         }
 
-        //private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        //{
+        // private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        // {
         //    if(e.LeftButton == MouseButtonState.Pressed)
         //    {
         //        DragMove();
         //    }
-        //}
-
+        // }
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
             Books365.BLL.User u = new Books365.BLL.User();

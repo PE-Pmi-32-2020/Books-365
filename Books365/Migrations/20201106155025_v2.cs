@@ -2,7 +2,7 @@
 
 namespace Books365.Migrations
 {
-    public partial class v2 : Migration
+    public partial class V2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,7 +10,7 @@ namespace Books365.Migrations
                 name: "EmailCurrentUser",
                 columns: table => new
                 {
-                    Email = table.Column<string>(nullable: false)
+                    Email = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {

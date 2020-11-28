@@ -23,10 +23,10 @@ namespace Books365.PL
     {
         public Profile()
         {
-           
-            InitializeComponent();
-            Func();
+            this.InitializeComponent();
+            this.ProfileHelper();
         }
+
         private void Button_Click_Minimize(object sender, RoutedEventArgs e)
         {
             SystemCommands.MinimizeWindow(this);
@@ -36,14 +36,15 @@ namespace Books365.PL
         {
             SystemCommands.CloseWindow(this);
         }
-        void Func()
+
+        private void ProfileHelper()
         {
             using (AppContext db = new AppContext())
             {
                 var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
-                var Registered_user = db.Users
+                var registered_user = db.Users
                                       .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
-                Username.Text = Registered_user.FirstName+" "+ Registered_user.LastName;
+                this.Username.Text = registered_user.FirstName + " " + registered_user.LastName;
                 var booksRead = db.ReadingStatuses.Where(u => u.BookStatus == "read");
                 var pagesRead = db.ReadingStatuses.Where(u => u.PagesWritten != 0);
                 var books = db.Books;
@@ -52,29 +53,31 @@ namespace Books365.PL
                 {
                     totalpages += readingStatus.PagesWritten;
                 }
+
                 int[] readISBNs = new int[booksRead.Count()];
                 string[] readAuthors = new string[booksRead.Count()];
-                int i= 0;
+                int i = 0;
                 foreach (var item in booksRead)
                 {
                     readISBNs[i] = item.BookISBN;
                     i++;
                 }
+
                 i = 0;
-                
-                for ( i = 0; i < readISBNs.Length-1; i++)
+                for (i = 0; i < readISBNs.Length - 1; i++)
                 {
                     foreach (var item in books)
                     {
                         if (item.ISBN == readISBNs[i])
+                        {
                             readAuthors[i] = item.Author;
+                        }
                     }
                 }
 
-                Total.Text += totalpages.ToString();
-                Booksfinished.Text += booksRead.Count().ToString();
+                this.Total.Text += totalpages.ToString();
+                this.Booksfinished.Text += booksRead.Count().ToString();
 
-                //Баг з максимальним значенням коли воно 0 - помилка
                 if (readAuthors.Length != 0)
                 {
                     var nameGroup = readAuthors.GroupBy(x => x);
@@ -84,16 +87,15 @@ namespace Books365.PL
                     {
                         foreach (var item in mostCommons)
                         {
-                            favouriteautor.Text += item.ToString() + " ";
+                            this.favouriteautor.Text += item.ToString() + " ";
                         }
                     }
                     else
-                        favouriteautor.Text += "Wow. A lot of Authors to Like";
+                    {
+                        this.favouriteautor.Text += "Wow. A lot of Authors to Like";
+                    }
                 }
-
-
             }
-           
         }
 
         private void Edit_Profile_Click(object sender, RoutedEventArgs e)
@@ -102,6 +104,7 @@ namespace Books365.PL
             editProfile.Show();
             this.Visibility = Visibility.Hidden;
         }
+
         private void Main_Menu_Click(object sender, RoutedEventArgs e)
         {
             Window1 window1 = new Window1();

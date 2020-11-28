@@ -4,21 +4,16 @@ using System.Text;
 
 namespace Books365.BLL
 {
-    class CurrentUser
+    internal class CurrentUser
     {
-        
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
-
 
         public string Email { get; set; }
 
         public string Password { get; set; }
 
         public int SecretPin { get; set; }
-        
-
     }
-
 }

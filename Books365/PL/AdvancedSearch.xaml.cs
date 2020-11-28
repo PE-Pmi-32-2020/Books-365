@@ -19,7 +19,7 @@ namespace Books365.PL
     {
         public AdvancedSearch()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

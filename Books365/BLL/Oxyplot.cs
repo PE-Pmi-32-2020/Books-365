@@ -1,8 +1,6 @@
 ﻿namespace Books365.PL
 {
     using System.Collections.Generic;
-    using System.Linq;
-    using OxyPlot;
     using OxyPlot.Series;
 
     public class MainViewModel
@@ -16,17 +14,13 @@
                 var booksRead = db.ReadingStatuses;
                 foreach (var item in booksRead)
                 {
-                    Columns.Add(new ColumnItem { Value=item.PagesWritten});
-
+                    this.Columns.Add(new ColumnItem { Value = item.PagesWritten });
                 }
             }
-
         }
+
         public string Title { get; private set; }
+
         public IList<ColumnItem> Columns { get; private set; }
     }
-
-
-
-
 }

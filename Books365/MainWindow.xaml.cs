@@ -23,9 +23,7 @@ namespace Books365
     {
         public MainWindow()
         {
-            
-            InitializeComponent();
-            
+            this.InitializeComponent();
             using (AppContext db = new AppContext())
             {
                 var l = db.EmailCurrentUser.ToList();
@@ -43,7 +41,5 @@ namespace Books365
                 }
             }
         }
-
-
     }
 }
