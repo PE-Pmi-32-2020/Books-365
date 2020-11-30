@@ -1,8 +1,5 @@
 ﻿using System.Windows;
-using System.Configuration;
-using Microsoft.Data.SqlClient;
 using System.Data;
-using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 

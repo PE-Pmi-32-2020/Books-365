@@ -78,11 +78,20 @@
         {
             using (Books365.AppContext db = new Books365.AppContext())
             {
-                db.Books.Add(new Book
+                Book newBook = new Book
                 {
                     Title = titleText.Text,
                     Year = Convert.ToInt32(yearText.Text),
                     Author = authorText.Text,
+                };
+                db.Books.Add(newBook);
+
+                db.ReadingStatuses.Add(new ReadingStatus
+                {
+                    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
+                    BookISBN = newBook.ISBN,
+                    PagesWritten = 0,
+                    Rating = 0,
                 });
 
                 db.SaveChanges();

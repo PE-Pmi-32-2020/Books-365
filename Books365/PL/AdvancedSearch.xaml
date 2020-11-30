@@ -3,10 +3,120 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Books365.PL"
+         xmlns:local="clr-namespace:Books365.PL"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="AdvancedSearch" Height="450" Width="800">
-    <Grid>
         
+        Title="AdvancedSearch" Height="350" Width="350" 
+        Icon="/PL/Images/bicon.ico"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,10,0,-10">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <!--#ba5370 → #f4e2d8-->
+                    <GradientStop Color="#ba5370" Offset="0.0"/>
+                    <GradientStop Color="#f4e2d8" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <StackPanel VerticalAlignment="Center">
+            <Image Source="Images/book365logo.png" Width="80" Margin="10" HorizontalAlignment="Center"/>
+            <TextBlock
+                Text="Books 365"
+                       FontWeight="Light"
+                       FontFamily="helvetica"
+                       FontSize="22"
+                       Foreground="White"
+                HorizontalAlignment="Center"
+                />
+
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="TitleText" FontFamily="Helvetica"
+                     FontSize="20"
+                     FontWeight="Light"
+                     Text="Title"
+                     HorizontalAlignment="Center"
+                     Foreground="white"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Width="235"
+                     HorizontalContentAlignment="Left"
+                     Opacity="0.5"
+                     Height="25"
+                         Margin="63,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="BookEdit" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" 
+                                        Foreground="White"/>
+
+
+            </StackPanel>
+            <Border Width="250"
+                Height="2"
+                Background="White"
+                Opacity="0.5" Margin="25,0,0,0"></Border>
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="YearText" FontFamily="Helvetica"
+                     FontSize="20"
+                     FontWeight="Light"
+                     Text="Year"
+                     HorizontalAlignment="Center"
+                     Foreground="white"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Width="235"
+                     HorizontalContentAlignment="Left"
+                     Opacity="0.5"
+                     Height="25"
+                         Margin="63,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="Calendar" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" 
+                                        Foreground="White"/>
+
+
+            </StackPanel>
+            <Border Width="250"
+                Height="2"
+                Background="White"
+                Opacity="0.5" Margin="25,0,0,0"></Border>
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="AuthorText" FontFamily="Helvetica"
+                     FontSize="20"
+                     FontWeight="Light"
+                     Text="Author"
+                     HorizontalAlignment="Center"
+                     Foreground="white"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Width="235"
+                     HorizontalContentAlignment="Left"
+                     Opacity="0.5"
+                     Height="25"
+                         Margin="63,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="HumanGreeting" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" 
+                                        Foreground="White"/>
+
+
+            </StackPanel>
+            <Border Width="250"
+                Height="2"
+                Background="White"
+                Opacity="0.5" Margin="25,0,0,0"></Border>
+
+        </StackPanel>
+        <Button x:Name="ButtonCancel" Margin="35,10,0,25" Grid.Row="1" Width="100" Height="40" Content="Cancel"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonCancel_Click" />
+        <Button x:Name="ButtonSearch" Margin="0,10,35,25" Grid.Row="1" Width="100" Height="40" Content="Search"  VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonSearch_Click" />
+
     </Grid>
 </Window>

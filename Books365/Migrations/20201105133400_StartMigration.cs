@@ -38,6 +38,8 @@ namespace Books365.Migrations
                 name: "ReadingStatuses",
                 columns: table => new
                 {
+                    Id = table.Column<int>(maxLength: 30, nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     UserEmail = table.Column<string>(maxLength: 50, nullable: true),
                     BookISBN = table.Column<int>(maxLength: 30, nullable: false),
                     PagesWritten = table.Column<int>(nullable: false),
