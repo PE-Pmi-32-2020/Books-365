@@ -16,7 +16,7 @@ namespace Books365.PL
 
             using (AppContext db = new AppContext())
             {
-                this.BooksGrid.ItemsSource = (from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten }).ToList();
+                this.BooksGrid.ItemsSource = (from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, RaedingStatus = readingstatus.BookStatus }).ToList();
 
                 var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
                 var registered_user = db.Users

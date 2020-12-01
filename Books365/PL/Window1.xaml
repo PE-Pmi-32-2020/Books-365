@@ -44,13 +44,14 @@
         <Button x:Name="log_out_button" Content="Log out" HorizontalAlignment="Left" Margin="639,5,0,0" VerticalAlignment="Top" Height="34" Width="94" Click="Log_out_button_Click" Grid.Row="1"/>
         <Button x:Name="notifications_button"    Content="SetNotifications" Grid.Row="1" Click="Notifications_button_Click" Margin="631,327,59,26"/>
 
-        <DataGrid x:Name="BooksGrid" Margin="42,90,279,0" AutoGenerateColumns="False" Height="270" Grid.Row="1" VerticalAlignment="Top">
+        <DataGrid x:Name="BooksGrid" Margin="42,90,200,0" AutoGenerateColumns="False" Height="270" Grid.Row="1" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Title}" Header="Book Name" Width="120"/>
                 <DataGridTextColumn Binding="{Binding Author}" Header="Author" Width="100"/>
                 <DataGridTextColumn Binding="{Binding Year}" Header="Year" Width="80"/>
                 <DataGridTextColumn Binding="{Binding Rating}" Header="Rating" Width="80"/>
                 <DataGridTextColumn Binding="{Binding PagesWritten}" Header="Pages" Width="80"/>
+                <DataGridTextColumn Binding="{Binding ReadingStatus}" Header="Status" Width="80"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
