@@ -67,10 +67,12 @@
                     Email = emailTextBox.Text.ToString(),
                     SecretPin = int.Parse(secretPinTextBox.Text.ToString()),
                 });
+
                 db.EmailCurrentUser.Add(new EmailOfCurrentUser
                 {
-                    Email = emailTextBox.Text.ToString(),
+                     Email = emailTextBox.Text.ToString(),
                 });
+                db.SaveChanges();
             }
         }
 
@@ -86,13 +88,13 @@
                 };
                 db.Books.Add(newBook);
 
-                db.ReadingStatuses.Add(new ReadingStatus
-                {
-                    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
-                    BookISBN = newBook.ISBN,
-                    PagesWritten = 0,
-                    Rating = 0,
-                });
+                //db.ReadingStatuses.Add(new ReadingStatus
+                //{
+                //    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
+                //    BookISBN = newBook.ISBN,
+                //    PagesWritten = 0,
+                //    Rating = 0,
+                //});
 
                 db.SaveChanges();
             }
