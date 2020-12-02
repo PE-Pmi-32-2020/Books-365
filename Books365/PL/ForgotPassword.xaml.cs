@@ -19,12 +19,10 @@ namespace Books365.PL
     /// </summary>
     public partial class ForgotPassword : Window
     {
-        public string Email { get; set; }
 
-        public ForgotPassword(string emailTextBox)
+        public ForgotPassword()
         {
             this.InitializeComponent();
-            this.Email = emailTextBox;
         }
 
         private void SecretPinTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -45,6 +43,20 @@ namespace Books365.PL
             SystemCommands.MinimizeWindow(this);
         }
 
+        private void Button_Click_Return(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
+        }
+
         private void Button_Click_Submit(object sender, RoutedEventArgs e)
         {
             Validator validator = new Validator();
@@ -59,7 +71,7 @@ namespace Books365.PL
             else
             {
                 Books365.BLL.User u = new Books365.BLL.User();
-                bool answer = u.ChangePassword(this.Email, this.SecretPinTextBox, this.NewPasswordTextBox);
+                bool answer = u.ChangePassword(this.EmailTextBox.Text, this.SecretPinTextBox, this.NewPasswordTextBox);
                 if (!answer)
                 {
                     MessageBox.Show("Wrong secret pin or email", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -86,6 +98,14 @@ namespace Books365.PL
             if (this.NewPasswordConfirmTextBox.Text == "Confirm new password")
             {
                 this.NewPasswordConfirmTextBox.Text = string.Empty;
+            }
+        }
+
+        private void EmailTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (this.EmailTextBox.Text == "Email")
+            {
+                this.EmailTextBox.Text = string.Empty;
             }
         }
     }

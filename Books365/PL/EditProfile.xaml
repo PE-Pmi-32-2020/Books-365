@@ -10,7 +10,7 @@
         Icon="/PL/Images/bicon.ico"
          AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>

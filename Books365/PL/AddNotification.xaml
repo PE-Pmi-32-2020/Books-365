@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         Title="AddNotification" Height="600" Width="500"
         Icon="/PL/Images/bicon.ico">
-    <Grid>
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>

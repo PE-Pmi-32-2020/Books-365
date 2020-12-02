@@ -71,6 +71,7 @@
                 {
                     Email = emailTextBox.Text.ToString(),
                 });
+                db.SaveChanges();
             }
         }
 

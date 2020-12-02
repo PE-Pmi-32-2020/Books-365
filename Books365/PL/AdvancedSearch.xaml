@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Books365.PL"
         mc:Ignorable="d"
         Title="AdvancedSearch" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
         
     </Grid>
 </Window>

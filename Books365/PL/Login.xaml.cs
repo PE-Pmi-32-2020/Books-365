@@ -44,6 +44,13 @@ namespace Books365.PL
             }
         }
 
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
+        }
+
         private void Button_Click_Register(object sender, RoutedEventArgs e)
         {
             Register r = new Register();
@@ -89,7 +96,7 @@ namespace Books365.PL
 
         private void LabelForgot_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ForgotPassword fg = new ForgotPassword(this.EmailTextBox.Text);
+            ForgotPassword fg = new ForgotPassword();
             fg.Show();
             this.Close();
         }

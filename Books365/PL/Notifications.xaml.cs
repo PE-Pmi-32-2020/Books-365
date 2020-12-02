@@ -62,6 +62,15 @@ namespace Books365.PL
             }
         }
 
+
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
+        }
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddNotification notification = new AddNotification();

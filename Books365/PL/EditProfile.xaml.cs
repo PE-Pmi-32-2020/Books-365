@@ -35,6 +35,13 @@ namespace Books365.PL
             SystemCommands.CloseWindow(this);
         }
 
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
+        }
+
         private void EditProfileFunc()
         {
             Books365.BLL.User u = new Books365.BLL.User();
