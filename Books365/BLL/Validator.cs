@@ -10,6 +10,9 @@ namespace Books365.BLL
 {
     internal class Validator
     {
+        /// <summary>
+        /// Function that check if password is correctly formed via regEx.(Get passwordbox)
+        /// </summary>
         public bool PasswordIsCorrect(PasswordBox password)
         {
             if (!Regex.IsMatch(password.Password, @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,30}"))
@@ -27,6 +30,9 @@ namespace Books365.BLL
             return true;
         }
 
+        /// <summary>
+        /// Function that check if password is correctly formed via regEx.(Get textbox)
+        /// </summary>
         public bool PasswordIsCorrect(TextBox password)
         {
             if (!Regex.IsMatch(password.Text, @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,30}"))
@@ -44,6 +50,9 @@ namespace Books365.BLL
             return true;
         }
 
+        /// <summary>
+        /// Function that check if email that user input already exists in database.
+        /// </summary>
         public bool EmailExists(TextBox email)
         {
             using (AppContext db = new AppContext())
@@ -62,6 +71,9 @@ namespace Books365.BLL
             }
         }
 
+        /// <summary>
+        /// Function that check if email is correctly formed via regEx.
+        /// </summary>
         public bool EmailIsCorrect(TextBox email)
         {
             if (!Regex.IsMatch(email.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
@@ -75,6 +87,9 @@ namespace Books365.BLL
             return true;
         }
 
+        /// <summary>
+        /// Function that check if textbox is empty.
+        /// </summary>
         public bool IsEmpty(TextBox textblock)
         {
             if (textblock.Text.Length == 0)
@@ -87,6 +102,9 @@ namespace Books365.BLL
             return false;
         }
 
+        /// <summary>
+        /// Function that check if passwordbox is empty.
+        /// </summary>
         public bool IsEmpty(PasswordBox passwordblock)
         {
             if (passwordblock.Password.Length == 0)
@@ -99,6 +117,9 @@ namespace Books365.BLL
             return false;
         }
 
+        /// <summary>
+        /// Function that check if inputed password and confirmed password are the same.(For passwordboxes)
+        /// </summary>
         public bool ConfirmIsSame(PasswordBox confrirmBox, PasswordBox passwordBox)
         {
             if (passwordBox.Password != confrirmBox.Password)
@@ -111,6 +132,9 @@ namespace Books365.BLL
             return true;
         }
 
+        /// <summary>
+        /// Function that check if inputed password and confirmed password are the same.(For textboxes)
+        /// </summary>
         public bool ConfirmIsSame(TextBox confrirmBox, TextBox passwordBox)
         {
             if (passwordBox.Text != confrirmBox.Text)
@@ -123,6 +147,9 @@ namespace Books365.BLL
             return true;
         }
 
+        /// <summary>
+        /// Function that check if secretPin is correctly formed via regEx.
+        /// </summary>
         public bool SecretPinIsCorrect(TextBox secretPin)
         {
             if (!Regex.IsMatch(secretPin.Text, @"^\d{4}$"))
@@ -136,6 +163,9 @@ namespace Books365.BLL
             return true;
         }
 
+        /// <summary>
+        /// Function that check if Year that user inputs is correct.
+        /// </summary>
         public bool YearIsValid(TextBox yearText)
         {
             if (!int.TryParse(yearText.Text, out int res))

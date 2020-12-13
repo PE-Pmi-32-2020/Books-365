@@ -27,7 +27,9 @@
         {
         }
 
-        /// GFDGD FGDF GDF
+        /// <summary>
+        /// Function that checks users input information and allows him to login into MainMenu window
+        /// </summary>
         public bool Login(TextBox text, PasswordBox password)
         {
             using (Books365.AppContext db = new Books365.AppContext())
@@ -55,6 +57,9 @@
             }
         }
 
+        /// <summary>
+        /// Function that adds new user into database. This function is called when user register hinself in a program
+        /// </summary>
         public void AddNewUser(TextBox firstNameTextBox, TextBox lastNameTextBox, PasswordBox passwordTextBox, TextBox emailTextBox, TextBox secretPinTextBox)
         {
             using (Books365.AppContext db = new Books365.AppContext())
@@ -75,6 +80,9 @@
             }
         }
 
+        /// <summary>
+        /// Fucntion that adds new user into database. This function is called when user register hinself in a program
+        /// </summary>
         public void AddBook(TextBox titleText, TextBox yearText, TextBox authorText)
         {
             using (Books365.AppContext db = new Books365.AppContext())
@@ -90,6 +98,9 @@
             }
         }
 
+        /// <summary>
+        /// Function that allows to edit user's profile data. This function can be called only for registered users.
+        /// </summary>
         public void EditProfile(TextBox firstNameTextBox, TextBox lastNameTextBox, PasswordBox passwordTextBox, PasswordBox confirmPasswordTextBox, TextBox secretPinTextBox)
         {
             using (Books365.AppContext db = new Books365.AppContext())
@@ -105,6 +116,9 @@
             }
         }
 
+        /// <summary>
+        /// Function that change password if user enter his email and secret pin corectly.
+        /// </summary>
         public bool ChangePassword(string email, TextBox secretPinTextBox, TextBox newPasswordTextBox)
         {
             using (Books365.AppContext db = new Books365.AppContext())
