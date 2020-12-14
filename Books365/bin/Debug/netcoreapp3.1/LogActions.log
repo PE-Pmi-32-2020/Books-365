@@ -325,3 +325,16 @@ Error Number:207,State:1,Class:16
 2020-12-14 21:25:41.8716||INFO|Books365.PL.Window1|User KyryloHalmiz@gmail.com  -  was logged out 
 2020-12-14 21:27:20.1567||INFO|Books365.PL.Login|User KyryloHalmiz@gmail.com - was logged in 
 2020-12-14 21:28:12.2388||INFO|Books365.PL.AddBook|BookAragorn 4 was added to library 
+2020-12-14 21:35:19.3402||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:36:54.7813||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:40:00.4591||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:40:12.4754||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:46:37.4257||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:47:59.6076||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:48:05.7986||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:50:05.0053||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:50:07.0143||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:50:32.9753||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:50:36.3715||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:50:46.5392||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:51:01.4546||INFO|Books365.PL.Window1|User KyryloHalmiz@gmail.com  -  was logged out 

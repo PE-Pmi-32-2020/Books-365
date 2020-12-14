@@ -3,6 +3,7 @@ using System.Data;
 using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Windows.Input;
 
 namespace Books365.PL
 {
@@ -14,6 +15,23 @@ namespace Books365.PL
         public AdvancedSearch()
         {
             this.InitializeComponent();
+        }
+
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
         }
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)

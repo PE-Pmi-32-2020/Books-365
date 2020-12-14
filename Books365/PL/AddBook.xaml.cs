@@ -2,6 +2,7 @@
 using NLog;
 using System.Linq;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Books365.PL
 {
@@ -15,6 +16,23 @@ namespace Books365.PL
         public AddBook()
         {
             this.InitializeComponent();
+        }
+
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
         }
 
         private void ButtonAddBook_Click(object sender, RoutedEventArgs e)

@@ -35,6 +35,16 @@ namespace Books365.PL
             win.DragMove();
         }
 
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             try
