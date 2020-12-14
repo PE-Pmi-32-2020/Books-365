@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Books365.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,13 +24,14 @@ namespace Books365.PL
             this.InitializeComponent();
         }
 
-        // private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        // {
-        //    if(e.LeftButton == MouseButtonState.Pressed)
-        //    {
-        //        DragMove();
-        //    }
-        // }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
             Books365.BLL.User u = new Books365.BLL.User();
@@ -51,12 +53,6 @@ namespace Books365.PL
             win.DragMove();
         }
 
-        private void Button_Click_Register(object sender, RoutedEventArgs e)
-        {
-            Register r = new Register();
-            r.Show();
-            this.Close();
-        }
 
         private void Button_Click_Minimize(object sender, RoutedEventArgs e)
         {
@@ -100,5 +96,70 @@ namespace Books365.PL
             fg.Show();
             this.Close();
         }
+
+        private void SecretPinTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (this.SecretPinTextBox.Text == "SecretPin")
+            {
+                this.SecretPinTextBox.Text = string.Empty;
+            }
+        }
+
+        private void FirstNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (this.FirstNameTextBox.Text == "Your first name")
+            {
+                this.FirstNameTextBox.Text = string.Empty;
+            }
+        }
+
+        private void LastNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (this.LastNameTextBox.Text == "Your last name")
+            {
+                this.LastNameTextBox.Text = string.Empty;
+            }
+        }
+
+        private void Button_Click_Reg(object sender, RoutedEventArgs e)
+        {
+            Validator validator = new Validator();
+            if (validator.IsEmpty(this.Email_Register) ||
+            !validator.EmailIsCorrect(this.Email_Register) ||
+            validator.IsEmpty(this.LastNameTextBox) ||
+            validator.IsEmpty(this.FirstNameTextBox) ||
+            validator.IsEmpty(this.SecretPinTextBox) ||
+            validator.EmailExists(this.Email_Register) ||
+            !validator.SecretPinIsCorrect(this.SecretPinTextBox) ||
+            !validator.PasswordIsCorrect(this.Password_Register))
+            {
+            }
+            else
+            {
+                Books365.BLL.User user = new Books365.BLL.User();
+                user.AddNewUser(this.FirstNameTextBox, this.LastNameTextBox, this.Password_Register, this.Email_Register, this.SecretPinTextBox);
+                Window1 w1 = new Window1();
+                w1.Show();
+                this.Close();
+            }
+        }
+
+        private void Email_Register_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (this.EmailTextBox.Text == "Enter your email")
+            {
+                this.EmailTextBox.Text = string.Empty;
+            }
+        }
+
+        //private void Button_MouseEnter(object sender, MouseEventArgs e)
+        //{
+        //    this.Button_Click_Reg.Background=Color.
+        //}
+
+        //private void Button_MouseLeave(object sender, MouseEventArgs e)
+        //{
+
+        //}
     }
 }

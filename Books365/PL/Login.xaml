@@ -5,117 +5,194 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Books365.PL" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="380"
-        AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" WindowStartupLocation="CenterScreen"
-        Icon="/PL/Images/bicon.ico">
-    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" AllowsTransparency="True" WindowStyle="None">
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+                <EasingPointKeyFrame KeyTime="00:00:00" Value="146,504"/>
+                <EasingPointKeyFrame KeyTime="00:00:00.1000000" Value="88,502"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LogIn" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-150"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-288"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-380"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)">
+                <EasingPointKeyFrame KeyTime="00:00:00.4000000" Value="536.506419314328,501.497004662654"/>
+                <EasingPointKeyFrame KeyTime="00:00:00.5000000" Value="446,502"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)">
+                <EasingPointKeyFrame KeyTime="00:00:00.4000000" Value="534.009123162192,0.500000004244478"/>
+                <EasingPointKeyFrame KeyTime="00:00:00.5000000" Value="499,0.999999999999994"/>
+                <EasingPointKeyFrame KeyTime="00:00:00.6000000" Value="486,1.99999999999999"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SignUp" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Exit_Min" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="button" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00.6000000" Value="#FFBA5370"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="button1" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00.6000000" Value="#FFBA5370"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Storyboard_Copy1">
+            <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+                <SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="88,502"/>
+                <SplinePointKeyFrame KeyTime="00:00:00.6000000" Value="146,504"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LogIn" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-380"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-288"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-150"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)">
+                <SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="446,502"/>
+                <SplinePointKeyFrame KeyTime="00:00:00.2000000" Value="536.506419314328,501.497004662654"/>
+                <SplinePointKeyFrame KeyTime="00:00:00.6000000" Value="536.506419314328,501.497004662654"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)">
+                <SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="499,0.999999999999994"/>
+                <SplinePointKeyFrame KeyTime="00:00:00.2000000" Value="534.009123162192,0.500000004244478"/>
+                <SplinePointKeyFrame KeyTime="00:00:00.6000000" Value="534.009123162192,0.500000004244478"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SignUp" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Exit_Min" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
 
-        <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,10,0,-10">
-            <Border.Background>
-                <LinearGradientBrush>
-                    <!--#ba5370 → #f4e2d8-->
-                    <GradientStop Color="#ba5370" Offset="0.0"/>
-                    <GradientStop Color="#f4e2d8" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Border.Background>
-        </Border>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button Click="Button_Click_Minimize" Width="20" Height="18" Margin="0,10,0,0">
+
+
+
+
+
+
+
+
+
+
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
+        <Path x:Name="path" Fill="#ba5370" HorizontalAlignment="Left" Height="504" Margin="292,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="538" RenderTransformOrigin="0.5,0.5">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="146,504">
+                        <LineSegment Point="83.5000000130483,2.00299553624249"/>
+                        <LineSegment Point="534.009123162192,0.500000004244478"/>
+                        <LineSegment Point="536.506419314328,501.497004662654"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <StackPanel x:Name="Exit_Min" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button x:Name="button1" Click="Button_Click_Minimize" Width="20" Height="18" Margin="0,0,0,0" Background="#00000000">
                 <Button.Content>
                     <TextBlock><Bold>-</Bold></TextBlock>
                 </Button.Content>
             </Button>
-            <Button Click="Button_Click_Exit" Width="20" Height="18" Margin="2,10,0,0">
+            <Button x:Name="button" Click="Button_Click_Exit" Width="20" Height="18" Margin="2,00,0,0" Background="#00000000">
                 <Button.Content>
                     <TextBlock><Bold>X</Bold></TextBlock>
                 </Button.Content>
             </Button>
         </StackPanel>
-        <StackPanel VerticalAlignment="Center">
-            <Image Source="Images/book365logo.png" Width="80" Margin="10" HorizontalAlignment="Center"/>
-            <TextBlock
-                Text="Books 365"
-                       FontWeight="Light"
-                       FontFamily="helvetica"
-                       FontSize="22"
-                       Foreground="White"
-                HorizontalAlignment="Center"
-                />
-                
-        </StackPanel>
-        <StackPanel Grid.Row="1">
+        <Grid x:Name="SignUp" HorizontalAlignment="Left" Height="459" VerticalAlignment="Top" Width="786" Visibility="Hidden">
+            <TextBlock HorizontalAlignment="Left" Height="21" Text="Books365" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="18" FontWeight="Bold" Margin="10,10,0,0"/>
+            <Button Click="Button_Click_Reg" Content="SIGN UP" HorizontalAlignment="Left" Height="40" Margin="461,409,0,0" VerticalAlignment="Top" Width="282" FontWeight="Bold" Background="#ba5370"/>
+            <!--MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"-->
+            <PasswordBox VerticalContentAlignment="Center" x:Name="Password_Register" MouseDoubleClick="PasswordTextBox_MouseDoubleClick" HorizontalAlignment="Left" Height="35" Margin="463,274,0,0" VerticalAlignment="Top" Width="282"/>
+            <TextBox x:Name="FirstNameTextBox" HorizontalAlignment="Left" Height="35" Margin="463,151,0,0" Text="Your first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" VerticalContentAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,195,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Bold" TextAlignment="Left"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,129,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontWeight="Bold" TextAlignment="Left"/>
+            <TextBlock HorizontalAlignment="Left" Height="39" Margin="463,85,0,0" Text="Let`s you all set up so you can start working with our amazing app" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Normal" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Height="24" Margin="421,49,0,0" Text="Sign Up for an account" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="613,129,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" FontWeight="Bold" TextAlignment="Left"/>
+            <TextBox x:Name="LastNameTextBox" HorizontalAlignment="Left" Height="35" Margin="614,151,0,0" Text="Your last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" VerticalContentAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,257,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" TextAlignment="Left"/>
+            <TextBox VerticalContentAlignment="Center" x:Name="SecretPinTextBox" HorizontalAlignment="Left" Height="35" Margin="462,341,0,0" Text="Enter your secret pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="281"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,319,0,0" Text="Secret Pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" TextAlignment="Left"/>
+            <TextBox VerticalContentAlignment="Center" MouseDoubleClick="Email_Register_MouseDoubleClick" x:Name="Email_Register" HorizontalAlignment="Left" Height="35" Margin="463,0,0,0" Text="Enter your email" TextWrapping="Wrap" VerticalAlignment="Center" Width="281"/>
+            <TextBlock HorizontalAlignment="Left" Height="39" Margin="55,176,0,0" Text="Log in to your account so you can work with books365 application" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Normal" TextAlignment="Center" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Height="24" Margin="14,147,0,0" Text="Already signed up?" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+            <Button Content="LOG IN" HorizontalAlignment="Left" Height="31" Margin="136,227,0,0" VerticalAlignment="Top" Width="121" FontWeight="Bold" >
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard Storyboard="{StaticResource Storyboard_Copy1}"/>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
 
-            <StackPanel  Orientation="Horizontal">
-                <TextBox x:Name="EmailTextBox" FontFamily="Helvetica"
-                     FontSize="20"
-                     FontWeight="Light"
-                     Text="Email"
-                     HorizontalAlignment="Center"
-                     Foreground="white"
-                     Background="Transparent"
-                     BorderThickness="0"
-                     Width="235"
-                     HorizontalContentAlignment="Left"
-                     Opacity="0.5"
-                     Height="25"
-                         Margin="63,0,0,0"
-                         MouseDoubleClick="EmailTextBox_Click"/>
-                <iconPacks:PackIconMaterial Kind="Account" 
-                                        HorizontalAlignment="Center" 
-                                        VerticalAlignment="Center" 
-                                        Foreground="White"/>
+        </Grid>
+        <Grid x:Name="LogIn" HorizontalAlignment="Left" Height="398" Margin="10,10,0,0" VerticalAlignment="Top" Width="768" d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="29*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="SIGN UP" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="141" FontWeight="Bold" Margin="442,269,0,0" Grid.Column="1">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Height="39" Margin="372,225,0,0" Text="Let`s you all set up so you can start working with our amazing app" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Normal" TextAlignment="Center" Foreground="White" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="24" Margin="331,196,0,0" Text="Don`t have an account yet?" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="White" Grid.Column="1"/>
+            <Button Click="Button_Click_Login" Content="LOG IN" HorizontalAlignment="Left" Height="33" Margin="43,353,0,0" VerticalAlignment="Top" Width="260" Background="#ba5370" FontWeight="Bold" Grid.ColumnSpan="2"/>
+            <TextBlock MouseDown="LabelForgot_MouseDown" MouseEnter="Label_MouseEnter" MouseLeave="LabelForgot_MouseLeave" x:Name="LabelForgot" HorizontalAlignment="Left" Height="25" Margin="101,328,0,0" Text="Forgot password ?" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="10" TextAlignment="Right" Foreground="#ba5370" Grid.Column="1"/>
+            <PasswordBox Password="Password" MouseDoubleClick="PasswordTextBox_MouseDoubleClick" x:Name="PasswordTextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="43,277,0,0" VerticalAlignment="Top" Width="260" Grid.ColumnSpan="2"/>
+            <TextBox MouseDoubleClick="EmailTextBox_Click" x:Name="EmailTextBox" HorizontalAlignment="Left" Height="35" Margin="43,210,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="43,255,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" TextAlignment="Left" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="43,188,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" TextAlignment="Left" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="39" Margin="43,144,0,0" Text="Log in to your account so you can work with books365 application" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Normal" TextAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="24" Margin="0,106,0,0" Text="Log in to your Account" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="18" FontWeight="Bold" TextAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="21" Text="Books365" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
 
-            </StackPanel>
-            <Border Width="250"
-                Height="2"
-                Background="White"
-                Opacity="0.5"></Border>
-            
-            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
-                <PasswordBox x:Name="PasswordTextBox" FontFamily="Helvetica"
-                     FontSize="20"
-                     FontWeight="Light"
-                     Password="Password"
-                     HorizontalAlignment="Center"
-                     Foreground="white"
-                     Background="Transparent"
-                     BorderThickness="0"
-                     Width="235"
-                     HorizontalContentAlignment="Left"
-                     Opacity="0.5"
-                     Height="25"
-                     MouseDoubleClick="PasswordTextBox_MouseDoubleClick"
-                         Margin="63,0,0,0"/>
-                <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
-                                        HorizontalAlignment="Center" 
-                                        VerticalAlignment="Center" 
-                                        Foreground="White"/>
+        </Grid>
 
-            </StackPanel>
-            <Border Width="250"
-                Height="2"
-                Background="White"
-                Opacity="0.5"></Border>
-            
-            
-        
-            
-        </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,50,0,0">
-            <Button Width="100" Height="40" Content="Login" Margin="60,0,60,0" Click="Button_Click_Login"/>
-            <Button Width="100" Height="40" Content="Register" Click="Button_Click_Register"/>
-        </StackPanel>
-        <StackPanel Margin="20" Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Orientation="Vertical">
-            <Label x:Name="LabelForgot" Margin="-5" MouseDown="LabelForgot_MouseDown" MouseLeave="LabelForgot_MouseLeave" MouseEnter="Label_MouseEnter" HorizontalAlignment="Center" Content="Forgot Password?" VerticalAlignment="Top" FontFamily="Segoe UI Emoji" Foreground="White"></Label>
-            <Border Width="100"
-                Height="2"
-                Background="White"
-                Opacity="0.5" VerticalAlignment="Top"/>
-        </StackPanel>
     </Grid>
 </Window>
