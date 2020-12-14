@@ -100,15 +100,6 @@
     </Window.Resources>
 
 
-
-
-
-
-
-
-
-
-
     <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
         <Path x:Name="path" Fill="#ba5370" HorizontalAlignment="Left" Height="504" Margin="292,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="538" RenderTransformOrigin="0.5,0.5">
             <Path.Data>
@@ -145,16 +136,16 @@
             <TextBlock HorizontalAlignment="Left" Height="21" Text="Books365" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="18" FontWeight="Bold" Margin="10,10,0,0"/>
             <Button Click="Button_Click_Reg" Content="SIGN UP" HorizontalAlignment="Left" Height="40" Margin="461,409,0,0" VerticalAlignment="Top" Width="282" FontWeight="Bold" Background="#ba5370"/>
             <!--MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"-->
-            <PasswordBox VerticalContentAlignment="Center" x:Name="Password_Register" MouseDoubleClick="PasswordTextBox_MouseDoubleClick" HorizontalAlignment="Left" Height="35" Margin="463,274,0,0" VerticalAlignment="Top" Width="282"/>
-            <TextBox x:Name="FirstNameTextBox" HorizontalAlignment="Left" Height="35" Margin="463,151,0,0" Text="Your first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" VerticalContentAlignment="Center"/>
+            <PasswordBox Password="Password" VerticalContentAlignment="Center" x:Name="Password_Register" MouseDoubleClick="PasswordTextBox_MouseDoubleClick" HorizontalAlignment="Left" Height="35" Margin="463,274,0,0" VerticalAlignment="Top" Width="282"/>
+            <TextBox MouseDoubleClick="FirstNameTextBox_MouseDoubleClick" x:Name="FirstNameTextBox" HorizontalAlignment="Left" Height="35" Margin="463,151,0,0" Text="Your first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" VerticalContentAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,195,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Bold" TextAlignment="Left"/>
             <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,129,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" FontWeight="Bold" TextAlignment="Left"/>
             <TextBlock HorizontalAlignment="Left" Height="39" Margin="463,85,0,0" Text="Let`s you all set up so you can start working with our amazing app" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Normal" TextAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" Height="24" Margin="421,49,0,0" Text="Sign Up for an account" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" Height="17" Margin="613,129,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" FontWeight="Bold" TextAlignment="Left"/>
-            <TextBox x:Name="LastNameTextBox" HorizontalAlignment="Left" Height="35" Margin="614,151,0,0" Text="Your last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" VerticalContentAlignment="Center"/>
+            <TextBox MouseDoubleClick="LastNameTextBox_MouseDoubleClick" x:Name="LastNameTextBox" HorizontalAlignment="Left" Height="35" Margin="614,151,0,0" Text="Your last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" VerticalContentAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,257,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" TextAlignment="Left"/>
-            <TextBox VerticalContentAlignment="Center" x:Name="SecretPinTextBox" HorizontalAlignment="Left" Height="35" Margin="462,341,0,0" Text="Enter your secret pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="281"/>
+            <TextBox MouseDoubleClick="SecretPinTextBox_MouseDoubleClick" VerticalContentAlignment="Center" x:Name="SecretPinTextBox" HorizontalAlignment="Left" Height="35" Margin="462,341,0,0" Text="Enter your secret pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="281"/>
             <TextBlock HorizontalAlignment="Left" Height="17" Margin="463,319,0,0" Text="Secret Pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" TextAlignment="Left"/>
             <TextBox VerticalContentAlignment="Center" MouseDoubleClick="Email_Register_MouseDoubleClick" x:Name="Email_Register" HorizontalAlignment="Left" Height="35" Margin="463,0,0,0" Text="Enter your email" TextWrapping="Wrap" VerticalAlignment="Center" Width="281"/>
             <TextBlock HorizontalAlignment="Left" Height="39" Margin="55,176,0,0" Text="Log in to your account so you can work with books365 application" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontWeight="Normal" TextAlignment="Center" Foreground="White"/>

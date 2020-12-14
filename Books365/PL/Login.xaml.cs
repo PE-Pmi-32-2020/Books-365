@@ -78,6 +78,10 @@ namespace Books365.PL
             {
                 this.PasswordTextBox.Password = string.Empty;
             }
+            else if (this.Password_Register.Password.ToString() == "Password")
+            {
+                this.Password_Register.Password = string.Empty;
+            }
         }
 
         private void Label_MouseEnter(object sender, MouseEventArgs e)
@@ -99,7 +103,7 @@ namespace Books365.PL
 
         private void SecretPinTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (this.SecretPinTextBox.Text == "SecretPin")
+            if (this.SecretPinTextBox.Text == "Enter your secret pin")
             {
                 this.SecretPinTextBox.Text = string.Empty;
             }
@@ -146,20 +150,10 @@ namespace Books365.PL
 
         private void Email_Register_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (this.EmailTextBox.Text == "Enter your email")
+            if (this.Email_Register.Text == "Enter your email")
             {
-                this.EmailTextBox.Text = string.Empty;
+                this.Email_Register.Text = string.Empty;
             }
         }
-
-        //private void Button_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    this.Button_Click_Reg.Background=Color.
-        //}
-
-        //private void Button_MouseLeave(object sender, MouseEventArgs e)
-        //{
-
-        //}
     }
 }
