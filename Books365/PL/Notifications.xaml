@@ -9,7 +9,7 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid Loaded="OnLoad">
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown" Loaded="OnLoad">
         <Border CornerRadius="10" Grid.RowSpan="2">
             <Border.Background>
                 <LinearGradientBrush>

@@ -6,6 +6,8 @@
          xmlns:local="clr-namespace:Books365.PL"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
+        Title="AdvancedSearch" Height="450" Width="800">
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
         
         Title="AdvancedSearch" Height="350" Width="350" 
         Icon="/PL/Images/bicon.ico"

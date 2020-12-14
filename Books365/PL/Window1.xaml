@@ -10,7 +10,7 @@
         Title="ShowBooks" Height="450" Width="800"
         Icon="/PL/Images/bicon.ico">
 
-    <Grid>
+    <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
         <Grid.RowDefinitions>
 
             <RowDefinition Height="1*"></RowDefinition>

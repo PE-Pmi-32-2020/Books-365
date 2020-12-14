@@ -2,6 +2,7 @@
 using System.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Windows.Input;
 
 namespace Books365.PL
 {
@@ -23,6 +24,13 @@ namespace Books365.PL
                                       .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
                 this.user_name_text_block.Text = registered_user.FirstName + " " + registered_user.LastName;
             }
+        }
+
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
         }
 
         private void Notifications_button_Click(object sender, RoutedEventArgs e)

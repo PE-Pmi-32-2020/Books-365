@@ -59,6 +59,13 @@
             SystemCommands.CloseWindow(this);
         }
 
+        private void Button_Click_Return(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
         private void EmailTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (this.EmailTextBox.Text == "Email")
@@ -105,6 +112,13 @@
             {
                 this.SecretPinTextBox.Text = string.Empty;
             }
+        }
+
+        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var move = sender as System.Windows.Controls.Grid;
+            var win = Window.GetWindow(move);
+            win.DragMove();
         }
     }
 }
