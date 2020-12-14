@@ -1,4 +1,5 @@
 ﻿using Books365.BLL;
+using NLog;
 using System.Linq;
 using System.Windows;
 
@@ -9,6 +10,8 @@ namespace Books365.PL
     /// </summary>
     public partial class AddBook : Window
     {
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+
         public AddBook()
         {
             this.InitializeComponent();
@@ -20,6 +23,7 @@ namespace Books365.PL
             if (validator.IsEmpty(this.TitleText) || validator.IsEmpty(this.YearText)
                 || !validator.YearIsValid(this.YearText) || validator.IsEmpty(this.AuthorText))
             {
+                Logger.Info($"Adding books - was failed");
             }
             else
             {
@@ -28,6 +32,7 @@ namespace Books365.PL
                 Application.Current.Windows.OfType<Window>().
                 Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
                 this.Close();
+                Logger.Info($"Book{this.TitleText.Text} was added to library");
             }
         }
 

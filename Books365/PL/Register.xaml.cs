@@ -13,12 +13,15 @@
     using System.Windows.Media.Imaging;
     using System.Windows.Shapes;
     using Books365.BLL;
+    using NLog;
 
     /// <summary>
     /// Interaction logic for Register.xaml
     /// </summary>
     public partial class Register : Window
     {
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+
         public Register()
         {
             this.InitializeComponent();
@@ -38,6 +41,7 @@
             !validator.PasswordIsCorrect(this.ConfirmPasswordTextBox) ||
             !validator.ConfirmIsSame(this.ConfirmPasswordTextBox, this.PasswordTextBox))
             {
+                Logger.Debug($"Registration is failed, users information is incorrect");
             }
             else
             {
@@ -46,6 +50,7 @@
                 Window1 w1 = new Window1();
                 w1.Show();
                 this.Close();
+                Logger.Info($"User was added {this.LastNameTextBox}");
             }
         }
 

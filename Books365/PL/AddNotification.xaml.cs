@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Linq;
 using Books365.BLL;
+using NLog;
+using Microsoft.Data.SqlClient;
 
 namespace Books365.PL
 {
@@ -19,6 +21,8 @@ namespace Books365.PL
     /// </summary>
     public partial class AddNotification : Window
     {
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+
         public AddNotification()
         {
             this.InitializeComponent();
@@ -33,19 +37,27 @@ namespace Books365.PL
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-            using (AppContext db = new AppContext())
+            try
             {
-                var date = Convert.ToDateTime(this.Picker.Text);
-                var message = this.Message.Text.ToString();
-                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
-                db.Notifications.Add(new Notification
+                using (AppContext db = new AppContext())
                 {
-                    Message = message,
-                    Date = date,
-                    Email = currentUserEmail,
-                });
-                db.SaveChanges();
-                this.Close();
+                    var date = Convert.ToDateTime(this.Picker.Text);
+                    var message = this.Message.Text.ToString();
+                    var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
+                    db.Notifications.Add(new Notification
+                    {
+                        Message = message,
+                        Date = date,
+                        Email = currentUserEmail,
+                    });
+                    db.SaveChanges();
+                    this.Close();
+                    Logger.Info($"Notification {message} - was added by {currentUserEmail}");
+                }
+            }
+            catch (SqlException ex)
+            {
+                Logger.Error($"Database connection is not avaliable {ex.Message}");
             }
 
             Notifications window = new Notifications();
@@ -54,6 +66,8 @@ namespace Books365.PL
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            Application.Current.Windows.OfType<Window>().
+            Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
             this.Close();
         }
     }

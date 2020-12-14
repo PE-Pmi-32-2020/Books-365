@@ -66,6 +66,10 @@ namespace Books365.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("bit");
+
                     b.HasKey("Message");
 
                     b.ToTable("Notifications");
@@ -73,11 +77,13 @@ namespace Books365.Migrations
 
             modelBuilder.Entity("Books365.ReadingStatus", b =>
                 {
+
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(30)
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
 
                     b.Property<int>("BookISBN")
                         .HasMaxLength(30)
@@ -101,6 +107,7 @@ namespace Books365.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
+
 
                     b.ToTable("ReadingStatuses");
                 });

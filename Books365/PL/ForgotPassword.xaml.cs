@@ -1,4 +1,5 @@
 ﻿using Books365.BLL;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace Books365.PL
     /// </summary>
     public partial class ForgotPassword : Window
     {
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
 
         public ForgotPassword()
         {
@@ -67,6 +69,7 @@ namespace Books365.PL
                 !validator.PasswordIsCorrect(this.NewPasswordTextBox) ||
                 !validator.ConfirmIsSame(this.NewPasswordConfirmTextBox, this.NewPasswordTextBox))
             {
+                Logger.Debug("User information is incorrect. Forgot password Failed");
             }
             else
             {
@@ -75,12 +78,14 @@ namespace Books365.PL
                 if (!answer)
                 {
                     MessageBox.Show("Wrong secret pin or email", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Logger.Debug($"User {u.Email} - enter a wrong secret pin");
                 }
                 else
                 {
                     this.Close();
                     Window1 w1 = new Window1();
                     w1.Show();
+                    Logger.Debug($"Secret Pin was successfully changed");
                 }
             }
         }
