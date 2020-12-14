@@ -52,7 +52,7 @@ namespace Books365.PL
 
                     foreach (var item in notifications)
                     {
-                        if (Convert.ToDateTime(item.Date) == DateTime.Now.Date)
+                        if (Convert.ToDateTime(item.Date) == DateTime.Now.Date && item.IsEnabled is true)
                         {
                             this.notifier.ShowInformation($"{item.Message}\n{item.Date}");
                             Logger.Info($"Notifications {item.Message} - was sended to {currentUserEmail}");
@@ -110,6 +110,24 @@ namespace Books365.PL
                     }
 
                     this.Table.ItemsSource = this.Messages;
+                }
+            }
+            catch (SqlException ex)
+            {
+                Logger.Error($"Database connection is not available {ex}");
+            }
+        }
+
+        private void Table_CellEditEnding(object sender, System.Windows.Controls.DataGridCellEditEndingEventArgs e)
+        {
+            var el = e.EditingElement.DataContext as Notification;
+            try
+            {
+                using (AppContext db = new AppContext())
+                {
+                    Notification change = db.Notifications.Where(x => x.Message == el.Message).FirstOrDefault();
+                    change.IsEnabled = !el.IsEnabled;
+                    db.SaveChanges();
                 }
             }
             catch (SqlException ex)

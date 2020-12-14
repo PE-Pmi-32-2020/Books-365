@@ -27,13 +27,13 @@
             <Button Content="+ Add" Width="150" Height="50" TextElement.FontSize="18"  Margin="300 0 0 0" HorizontalAlignment="Right" Click="Button_Click"/>
         </StackPanel>
 
-        <DataGrid x:Name="Table" AutoGenerateColumns="False" Margin="12,118,12,26" Width="777" Loaded="Load_Table" >
+        <DataGrid x:Name="Table" AutoGenerateColumns="False" Margin="12,118,12,26" Width="777" Loaded="Load_Table" CellEditEnding="Table_CellEditEnding" >
 
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Date" Binding="{Binding Date}"  Width="*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
                 <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="*"/>
-                <DataGridCheckBoxColumn Header="Yes/No" IsThreeState="True" Width="*" />
+                <DataGridCheckBoxColumn Header="Yes/No" IsThreeState="True" Binding="{Binding IsEnabled}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
         <Border CornerRadius="10">
