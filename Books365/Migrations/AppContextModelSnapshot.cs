@@ -15,29 +15,29 @@ namespace Books365.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("Books365.Book", b =>
                 {
                     b.Property<int>("ISBN")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasMaxLength(30)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Author")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Year")
-                        .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(4)
+                        .HasColumnType("int");
 
                     b.HasKey("ISBN");
 
@@ -56,15 +56,20 @@ namespace Books365.Migrations
 
             modelBuilder.Entity("Books365.Notification", b =>
                 {
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Message")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Message");
 
                     b.ToTable("Notifications");
                 });
@@ -72,8 +77,8 @@ namespace Books365.Migrations
             modelBuilder.Entity("Books365.ReadingStatus", b =>
                 {
                     b.Property<int>("BookISBN")
-                        .HasColumnType("int")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("int");
 
                     b.Property<string>("BookStatus")
                         .HasColumnType("nvarchar(max)");
@@ -82,15 +87,15 @@ namespace Books365.Migrations
                         .HasColumnType("int");
 
                     b.Property<double>("Rating")
-                        .HasColumnType("float")
-                        .HasMaxLength(3);
+                        .HasMaxLength(3)
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("StartOfReading")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserEmail")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.ToTable("ReadingStatuses");
                 });
@@ -98,24 +103,24 @@ namespace Books365.Migrations
             modelBuilder.Entity("Books365.User", b =>
                 {
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<int>("SecretPin")
-                        .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(4)
+                        .HasColumnType("int");
 
                     b.HasKey("Email");
 

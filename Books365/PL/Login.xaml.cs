@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,8 @@ namespace Books365.PL
     /// </summary>
     public partial class Login : Window
     {
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+
         public Login()
         {
             this.InitializeComponent();
@@ -35,12 +38,14 @@ namespace Books365.PL
             Books365.BLL.User u = new Books365.BLL.User();
             if (u.Login(this.EmailTextBox, this.PasswordTextBox))
             {
+                Logger.Info($"User {this.EmailTextBox.Text} - was logged in");
                 Window1 w1 = new Window1();
                 w1.Show();
                 this.Close();
             }
             else
             {
+                Logger.Warn($"Login data was incorrect");
             }
         }
 

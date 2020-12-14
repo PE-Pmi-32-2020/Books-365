@@ -6,6 +6,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Windows.Input;
+using NLog;
 
 namespace Books365.PL
 {
@@ -14,6 +15,8 @@ namespace Books365.PL
     /// </summary>
     public partial class Window1 : Window
     {
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+
         public Window1()
         {
             this.InitializeComponent();
@@ -45,11 +48,18 @@ namespace Books365.PL
 
         private void Simple_search_button_Click(object sender, RoutedEventArgs e)
         {
-            using (AppContext db = new AppContext())
+            try
             {
-                db.Books.Load();
-                this.BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
-                                                .Where(b => b.Title == this.search_textbox.Text);
+                using (AppContext db = new AppContext())
+                {
+                    db.Books.Load();
+                    this.BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
+                                                    .Where(b => b.Title == this.search_textbox.Text);
+                }
+            }
+            catch (SqlException ex)
+            {
+                Logger.Error($"Database connection is not avaliable {ex.Message}");
             }
         }
 
@@ -64,6 +74,8 @@ namespace Books365.PL
         {
             using (AppContext db = new AppContext())
             {
+                Logger.Info($"User {db.EmailCurrentUser.First().Email.ToString()}  -  was logged out");
+
                 db.EmailCurrentUser.Remove(db.EmailCurrentUser.FirstOrDefault());
                 db.SaveChanges();
             }

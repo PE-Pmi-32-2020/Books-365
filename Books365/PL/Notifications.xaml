@@ -33,7 +33,7 @@
                 <DataGridTextColumn Header="Date" Binding="{Binding Date}"  Width="*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
                 <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="*"/>
-                <DataGridCheckBoxColumn Header="Yes/No" Width="*" />
+                <DataGridCheckBoxColumn Header="Yes/No" IsThreeState="True" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
         <Border CornerRadius="10">

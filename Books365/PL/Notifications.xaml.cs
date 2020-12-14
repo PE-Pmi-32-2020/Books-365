@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
 using ToastNotifications.Messages;
 using ToastNotifications.Position;
+using NLog;
+using Microsoft.Data.SqlClient;
 
 namespace Books365.PL
 {
@@ -24,6 +18,8 @@ namespace Books365.PL
     public partial class Notifications : Window
     {
         public ObservableCollection<Notification> Messages { get; set; }
+
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
 
         public Notifications()
         {
@@ -47,21 +43,28 @@ namespace Books365.PL
 
         private void OnLoad(object sender, RoutedEventArgs e)
         {
-            using (AppContext db = new AppContext())
+            try
             {
-                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
-                var notifications = db.Notifications.Where(u => u.Email == currentUserEmail).ToList();
-
-                foreach (var item in notifications)
+                using (AppContext db = new AppContext())
                 {
-                    if (Convert.ToDateTime(item.Date) == DateTime.Now.Date)
+                    var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
+                    var notifications = db.Notifications.Where(u => u.Email == currentUserEmail).ToList();
+
+                    foreach (var item in notifications)
                     {
-                        this.notifier.ShowInformation($"{item.Message}\n{item.Date}");
+                        if (Convert.ToDateTime(item.Date) == DateTime.Now.Date)
+                        {
+                            this.notifier.ShowInformation($"{item.Message}\n{item.Date}");
+                            Logger.Info($"Notifications {item.Message} - was sended to {currentUserEmail}");
+                        }
                     }
                 }
             }
+            catch (SqlException ex)
+            {
+                Logger.Error($"Database connection is not avaliable {ex.Message}");
+            }
         }
-
 
         private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -69,7 +72,6 @@ namespace Books365.PL
             var win = Window.GetWindow(move);
             win.DragMove();
         }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -89,22 +91,30 @@ namespace Books365.PL
         {
             Notification notification = this.Table.SelectedItem as Notification;
             this.Messages.Remove(notification);
+            Logger.Info($"Notification was deleted - {notification.Message}");
         }
 
         private void Load_Table(object sender, RoutedEventArgs e)
         {
-            using (AppContext db = new AppContext())
+            try
             {
-                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
-                var notifications = db.Notifications.Where(u => u.Email == currentUserEmail).ToList();
-                this.Messages = new ObservableCollection<Notification>();
-
-                foreach (var item in notifications)
+                using (AppContext db = new AppContext())
                 {
-                    this.Messages.Add(item);
-                }
+                    var currentUserEmail = db.EmailCurrentUser.FirstOrDefault().Email;
+                    var notifications = db.Notifications.Where(u => u.Email == currentUserEmail).ToList();
+                    this.Messages = new ObservableCollection<Notification>();
 
-                this.Table.ItemsSource = this.Messages;
+                    foreach (var item in notifications)
+                    {
+                        this.Messages.Add(item);
+                    }
+
+                    this.Table.ItemsSource = this.Messages;
+                }
+            }
+            catch (SqlException ex)
+            {
+                Logger.Error($"Database connection is not available {ex}");
             }
         }
     }

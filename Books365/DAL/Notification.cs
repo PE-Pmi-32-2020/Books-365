@@ -18,5 +18,6 @@ namespace Books365
         public string Email { get; set; }
 
         public DateTime Date { get; set; }
+
     }
 }
