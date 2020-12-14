@@ -28,5 +28,7 @@ namespace Books365
         [MinLength(4)]
         [MaxLength(4)]
         public int SecretPin { get; set; }
+
+
     }
 }

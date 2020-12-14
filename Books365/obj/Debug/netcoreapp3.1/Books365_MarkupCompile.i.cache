@@ -12,9 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Volod\source\repos\Book365git\Books365\App.xaml
 132002265235
 
-33-1228014870
-2191394695435
+35-643319485
+219-2107968000
 MainWindow.xaml;PL\AddBook.xaml;PL\AddNotification.xaml;PL\AdvancedSearch.xaml;PL\Books365Button.xaml;PL\Books365DataGrid.xaml;PL\EditProfile.xaml;PL\ForgotPassword.xaml;PL\Login.xaml;PL\Notifications.xaml;PL\Profile.xaml;PL\Register.xaml;PL\Window1.xaml;
 
-True
+False
 

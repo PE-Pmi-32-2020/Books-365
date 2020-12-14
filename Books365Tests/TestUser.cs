@@ -1,6 +1,9 @@
 using Xunit;
 using System.Linq;
 using System.Windows.Controls;
+using Books365.BLL;
+
+
 
 namespace Books365Tests
 {

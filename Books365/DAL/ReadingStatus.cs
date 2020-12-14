@@ -10,6 +10,10 @@ namespace Books365
 {
     internal class ReadingStatus
     {
+        [Key]
+        [MaxLength(30)]
+        public int Id { get; set; }
+
         [MinLength(6)]
         [MaxLength(50)]
         public string UserEmail { get; set; }

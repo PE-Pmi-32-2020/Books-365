@@ -96,13 +96,19 @@
                 };
                 db.Books.Add(newBook);
 
-                //db.ReadingStatuses.Add(new ReadingStatus
+                db.ReadingStatuses.Add(new ReadingStatus
                 //{
-                //    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
-                //    BookISBN = newBook.ISBN,
-                //    PagesWritten = 0,
-                //    Rating = 0,
-                //});
+                {
+                    //    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
+                    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
+                    //    BookISBN = newBook.ISBN,
+                    BookISBN = newBook.ISBN,
+                    //    PagesWritten = 0,
+                    PagesWritten = 0,
+                    //    Rating = 0,
+                    Rating = 0,
+                    //});
+                });
 
                 db.SaveChanges();
             }

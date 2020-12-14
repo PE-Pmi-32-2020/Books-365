@@ -33,12 +33,12 @@ namespace Books365.PL
             Window1 w = new Window1();
             w.Show();
             this.Close();
-
-        private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            var move = sender as System.Windows.Controls.Grid;
-            var win = Window.GetWindow(move);
-            win.DragMove();
         }
+        //private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    var move = sender as System.Windows.Controls.Grid;
+        //    var win = Window.GetWindow(move);
+        //    win.DragMove();
+        //}
     }
 }

@@ -1,37 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365Tests\\Books365Tests.csproj": {}
+    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365Tests\\Books365Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365Tests\\Books365Tests.csproj": {
+    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365Tests\\Books365Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365Tests\\Books365Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365Tests\\Books365Tests.csproj",
         "projectName": "Books365Tests",
-        "projectPath": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365Tests\\Books365Tests.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365Tests\\obj\\",
+        "projectPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365Tests\\Books365Tests.csproj",
+        "packagesPath": "C:\\Users\\Volod\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Volod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.intenselab.net:8445/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365\\Books365.csproj": {
-                "projectPath": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365\\Books365.csproj"
+              "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj": {
+                "projectPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj"
               }
             }
           }
@@ -44,6 +47,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -84,35 +88,38 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365\\Books365.csproj": {
+    "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365\\Books365.csproj",
+        "projectUniqueName": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
         "projectName": "Books365",
-        "projectPath": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365\\Books365.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acer\\Source\\Repos\\Books-365\\30112020\\Books365\\obj\\",
+        "projectPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\Books365.csproj",
+        "packagesPath": "C:\\Users\\Volod\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Volod\\source\\repos\\Book365git\\Books365\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Volod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.intenselab.net:8445/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -124,6 +131,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MahApps.Metro.IconPacks.Material": {
               "target": "Package",
@@ -131,7 +139,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -180,7 +188,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
