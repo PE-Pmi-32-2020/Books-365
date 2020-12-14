@@ -1,5 +1,6 @@
 ﻿using Books365.BLL;
 using NLog;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
@@ -45,10 +46,13 @@ namespace Books365.PL
             }
             else
             {
+                string title = this.TitleText.Text;
+                int year = Convert.ToInt32(this.YearText.Text);
+                string author = this.AuthorText.Text;
                 Books365.BLL.User u = new Books365.BLL.User();
-                u.AddBook(this.TitleText, this.YearText, this.AuthorText);
-                Application.Current.Windows.OfType<Window>().
-                Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
+                u.AddBook(title, year, author);
+                Window1 p = new Window1();
+                p.Show();
                 this.Close();
                 Logger.Info($"Book{this.TitleText.Text} was added to library");
             }
@@ -56,8 +60,8 @@ namespace Books365.PL
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Windows.OfType<Window>().
-            Where(w => !w.IsVisible).FirstOrDefault().Visibility = Visibility.Visible;
+            Window1 p = new Window1();
+            p.Show();
             this.Close();
         }
     }

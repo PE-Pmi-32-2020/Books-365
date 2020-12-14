@@ -87,7 +87,7 @@ namespace Books365.PL
         {
             AddBook addBook = new AddBook();
             addBook.Show();
-            this.Visibility = Visibility.Hidden;
+            this.Close();
         }
 
         private void User_name_text_block_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

@@ -338,3 +338,11 @@ Error Number:207,State:1,Class:16
 2020-12-14 21:50:36.3715||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
 2020-12-14 21:50:46.5392||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
 2020-12-14 21:51:01.4546||INFO|Books365.PL.Window1|User KyryloHalmiz@gmail.com  -  was logged out 
+2020-12-14 22:22:06.0618||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
+2020-12-14 22:24:09.3389||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
+2020-12-14 22:25:00.0155||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
+2020-12-14 22:36:02.5945||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
+2020-12-14 22:36:08.5506||INFO|Books365.PL.AddBook|BookTitle was added to library 
+2020-12-14 22:46:38.1774||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
+2020-12-14 22:47:20.1195||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
+2020-12-14 22:47:39.3537||INFO|Books365.PL.AddBook|BookEragon was added to library 

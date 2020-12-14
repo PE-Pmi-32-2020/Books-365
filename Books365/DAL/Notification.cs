@@ -20,6 +20,5 @@ namespace Books365
         public DateTime Date { get; set; }
 
         public bool IsEnabled { get; set; }
-
     }
 }

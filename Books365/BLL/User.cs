@@ -84,30 +84,30 @@
         /// <summary>
         /// Fucntion that adds new user into database. This function is called when user register hinself in a program
         /// </summary>
-        public void AddBook(TextBox titleText, TextBox yearText, TextBox authorText)
+        public void AddBook(string titleText, int yearText, string authorText)
         {
             using (Books365.AppContext db = new Books365.AppContext())
             {
                 Book newBook = new Book
                 {
-                    Title = titleText.Text,
-                    Year = Convert.ToInt32(yearText.Text),
-                    Author = authorText.Text,
+                    Title = titleText,
+                    Year = yearText,
+                    Author = authorText,
                 };
                 db.Books.Add(newBook);
-
+                db.SaveChanges();
                 db.ReadingStatuses.Add(new ReadingStatus
-                //{
                 {
-                    //    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
-                    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
-                    //    BookISBN = newBook.ISBN,
-                    BookISBN = newBook.ISBN,
-                    //    PagesWritten = 0,
+                    UserEmail = db.EmailCurrentUser.FirstOrDefault().ToString(),
+                    BookISBN = db.Books
+                    .Where(u => u.Title == titleText)
+                    .Where(u => u.Year == yearText)
+                    .Where(u => u.Author == authorText)
+                    .FirstOrDefault().ISBN,
                     PagesWritten = 0,
-                    //    Rating = 0,
                     Rating = 0,
-                    //});
+                    StartOfReading = DateTime.Now,
+                    BookStatus = "started reading",
                 });
 
                 db.SaveChanges();

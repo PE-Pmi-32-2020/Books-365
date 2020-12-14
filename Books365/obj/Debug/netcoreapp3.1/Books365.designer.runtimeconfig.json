@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Volod\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Volod\\.nuget\\packages",
-      "C:\\Microsoft\\Xamarin\\NuGet"
+      "C:\\Users\\Kyryl\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Kyryl\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
