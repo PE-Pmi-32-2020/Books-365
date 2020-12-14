@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Windows.Input;
 using NLog;
+using Microsoft.Data.SqlClient;
 
 namespace Books365.PL
 {
@@ -25,7 +26,7 @@ namespace Books365.PL
                 var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
                 var registered_user = db.Users
                                       .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
-                this.user_name_text_block.Text = registered_user.FirstName + " " + registered_user.LastName;
+                this.user_name_text_block.Text = registered_user.FirstName;
             }
         }
 
@@ -104,6 +105,16 @@ namespace Books365.PL
         private void User_name_text_block_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             this.user_name_text_block.Opacity = 1;
+        }
+
+        private void Button_Click_Minimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
         }
     }
 }

@@ -300,3 +300,28 @@ Error Number:207,State:1,Class:16
 2020-12-14 19:39:03.7803||INFO|Books365.PL.AddNotification|Notification Today i have to read 1984 - was added by vovchyk@gmail.com 
 2020-12-14 19:39:03.8883||INFO|Books365.PL.Notifications|Notifications Some book - was sended to vovchyk@gmail.com 
 2020-12-14 19:39:24.8728||INFO|Books365.PL.Notifications|Notifications Some book - was sended to vovchyk@gmail.com 
+2020-12-14 20:52:14.6973||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 20:53:56.9848||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 20:57:08.3328||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 20:57:09.8742||INFO|Books365.PL.Window1|User KyryloHalmiz@gmail.com  -  was logged out 
+2020-12-14 21:06:58.7610||INFO|Books365.PL.Login|User KyryloHalmiz@gmail.com - was logged in 
+2020-12-14 21:08:26.8210||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:11:53.8865||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:16:06.2437||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:16:21.4595||INFO|Books365.PL.AddNotification|Notification Read something - was added by KyryloHalmiz@gmail.com 
+2020-12-14 21:17:06.2699||INFO|Books365.PL.AddNotification|Notification READ!!!!! - was added by KyryloHalmiz@gmail.com 
+2020-12-14 21:17:06.3849||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:18:06.4904||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:18:31.8308||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:23:31.6371||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:23:47.6428||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:23:56.0250||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:24:39.7449||INFO|Books365.MainWindow|User KyryloHalmiz@gmail.com - was logged into system 
+2020-12-14 21:24:41.3728||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:25:15.6281||INFO|Books365.PL.AddNotification|Notification Hello ma friend - was added by KyryloHalmiz@gmail.com 
+2020-12-14 21:25:15.6969||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:25:15.6969||INFO|Books365.PL.Notifications|Notifications READ!!!!! - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:25:22.9746||INFO|Books365.PL.Notifications|Notifications Hello ma friend - was sended to KyryloHalmiz@gmail.com 
+2020-12-14 21:25:41.8716||INFO|Books365.PL.Window1|User KyryloHalmiz@gmail.com  -  was logged out 
+2020-12-14 21:27:20.1567||INFO|Books365.PL.Login|User KyryloHalmiz@gmail.com - was logged in 
+2020-12-14 21:28:12.2388||INFO|Books365.PL.AddBook|BookAragorn 4 was added to library 

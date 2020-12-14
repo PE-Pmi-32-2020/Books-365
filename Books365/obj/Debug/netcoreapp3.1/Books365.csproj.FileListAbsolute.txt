@@ -115,8 +115,6 @@ C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\Books365
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Books365Button.baml
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Books365.dll.config
-C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Register.g.cs
-C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\Register.baml
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\ForgotPassword.g.cs
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\ForgotPassword.baml
 C:\Users\Volod\source\repos\Book365git\Books365\obj\Debug\netcoreapp3.1\PL\AddBook.g.cs
@@ -361,3 +359,35 @@ C:\Users\Vovchyk Halamaha\source\repos\Book Project\Books365\bin\Debug\netcoreap
 C:\Users\Vovchyk Halamaha\source\repos\Book Project\Books365\obj\Debug\netcoreapp3.1\Books365.csprojAssemblyReference.cache
 C:\Users\Vovchyk Halamaha\source\repos\Book Project\Books365\obj\Debug\netcoreapp3.1\Books365.genruntimeconfig.cache
 C:\Users\Vovchyk Halamaha\source\repos\Book Project\Books365\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\Volod\source\repos\Book365git\Books365\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll

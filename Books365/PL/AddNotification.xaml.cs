@@ -49,6 +49,7 @@ namespace Books365.PL
                         Message = message,
                         Date = date,
                         Email = currentUserEmail,
+                        IsEnabled = true,
                     });
                     db.SaveChanges();
                     this.Close();
