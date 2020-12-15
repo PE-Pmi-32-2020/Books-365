@@ -346,3 +346,46 @@ Error Number:207,State:1,Class:16
 2020-12-14 22:46:38.1774||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
 2020-12-14 22:47:20.1195||INFO|Books365.MainWindow|User kyrylhalmiz@gmail.com - was logged into system 
 2020-12-14 22:47:39.3537||INFO|Books365.PL.AddBook|BookEragon was added to library 
+2020-12-14 23:06:58.2780||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:10:54.4131||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:14:54.9498||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:15:14.5993||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:17:56.3967||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:21:52.2382||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:22:44.9289||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:23:17.4023||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:27:18.8125||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:27:37.8385||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:28:59.3946||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:33:57.8240||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:34:14.7001||INFO|Books365.PL.Notifications|Notifications Some book - was sended to vovchyk@gmail.com 
+2020-12-14 23:34:28.7097||INFO|Books365.PL.Notifications|Notifications Some book - was sended to vovchyk@gmail.com 
+2020-12-14 23:39:18.1329||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-14 23:39:37.4247||INFO|Books365.PL.Notifications|Notifications Some book - was sended to vovchyk@gmail.com 
+2020-12-14 23:40:07.2115||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:26:11.8426||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:27:14.1726||INFO|Books365.PL.AddBook|BookSecret room was added to library 
+2020-12-15 00:27:38.1648||INFO|Books365.PL.Notifications|Notifications Have to read Harry Potter - was sended to vovchyk@gmail.com 
+2020-12-15 00:27:38.1859||INFO|Books365.PL.Notifications|Notifications Read Harry Potter - 2 - was sended to vovchyk@gmail.com 
+2020-12-15 00:27:38.2016||INFO|Books365.PL.Notifications|Notifications Today i have to read 1984 - was sended to vovchyk@gmail.com 
+2020-12-15 00:28:25.2465||INFO|Books365.PL.Notifications|Notifications Have to read Harry Potter - was sended to vovchyk@gmail.com 
+2020-12-15 00:28:25.2638||INFO|Books365.PL.Notifications|Notifications Read Harry Potter - 2 - was sended to vovchyk@gmail.com 
+2020-12-15 00:28:25.2815||INFO|Books365.PL.Notifications|Notifications Today i have to read 1984 - was sended to vovchyk@gmail.com 
+2020-12-15 00:28:35.0005||INFO|Books365.PL.Notifications|Notifications Have to read Harry Potter - was sended to vovchyk@gmail.com 
+2020-12-15 00:28:35.0182||INFO|Books365.PL.Notifications|Notifications Read Harry Potter - 2 - was sended to vovchyk@gmail.com 
+2020-12-15 00:40:55.9246||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:41:45.6094||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:44:10.7721||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:47:56.2829||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:56:23.8681||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:57:58.5157||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 00:58:32.2816||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 01:00:08.9910||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 01:02:30.1328||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 01:02:53.0792||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 01:04:04.4755||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 
+2020-12-15 01:08:37.2816||INFO|Books365.PL.Notifications|Notifications Have to read Harry Potter - was sended to vovchyk@gmail.com 
+2020-12-15 01:08:37.3091||INFO|Books365.PL.Notifications|Notifications Read Harry Potter - 2 - was sended to vovchyk@gmail.com 
+2020-12-15 01:10:29.7528||INFO|Books365.PL.Window1|User vovchyk@gmail.com  -  was logged out 
+2020-12-15 13:34:18.1613||INFO|Books365.PL.Login|User vovchyk@gmail.com - was logged in 
+2020-12-15 13:35:21.4220||INFO|Books365.MainWindow|User vovchyk@gmail.com - was logged into system 

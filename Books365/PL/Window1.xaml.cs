@@ -5,6 +5,9 @@ using System.Linq;
 using System.Windows.Input;
 using NLog;
 using Microsoft.Data.SqlClient;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace Books365.PL
 {
@@ -18,16 +21,6 @@ namespace Books365.PL
         public Window1()
         {
             this.InitializeComponent();
-
-            using (AppContext db = new AppContext())
-            {
-                this.BooksGrid.ItemsSource = (from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, RaedingStatus = readingstatus.BookStatus }).ToList();
-
-                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
-                var registered_user = db.Users
-                                      .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
-                this.user_name_text_block.Text = registered_user.FirstName;
-            }
         }
 
         private void GridOfWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -51,8 +44,10 @@ namespace Books365.PL
                 using (AppContext db = new AppContext())
                 {
                     db.Books.Load();
-                    this.BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
-                                                    .Where(b => b.Title == this.search_textbox.Text);
+                    this.BooksGrid.ItemsSource = (from book in db.Books where book.Title == this.search_textbox.Text join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, ReadingStatus = readingstatus.BookStatus }).ToList();
+
+                    //this.BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
+                                                    //.Where(b => b.Title == this.search_textbox.Text);
                 }
             }
             catch (SqlException ex)
@@ -115,6 +110,23 @@ namespace Books365.PL
         private void Button_Click_Exit(object sender, RoutedEventArgs e)
         {
             SystemCommands.CloseWindow(this);
+        }
+
+        private static ObservableCollection<T> ToObservableCollection<T>(IEnumerable<T> en)
+        {
+            return new ObservableCollection<T>(en);
+        }
+
+        private void BooksGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (AppContext db = new AppContext())
+            {
+                this.BooksGrid.ItemsSource = ToObservableCollection(from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new {Id=book.ISBN, Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, ReadingStatus = readingstatus.BookStatus});
+                var currentUserEmail = db.EmailCurrentUser.FirstOrDefault();
+                var registered_user = db.Users
+                                      .Where(u => u.Email == currentUserEmail.Email).FirstOrDefault();
+                this.user_name_text_block.Text = registered_user.FirstName;
+            }
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Books365.PL
                 Window1 w = new Window1();
                 w.Show();
                 db.Books.Load();
-                w.BooksGrid.ItemsSource = db.Books.Local.ToBindingList().Where(b => (this.TitleText.Text == string.Empty || b.Title == this.TitleText.Text) && (this.YearText.Text == string.Empty || Convert.ToString(b.Year) == this.YearText.Text) && (this.AuthorText.Text == string.Empty || b.Author == this.AuthorText.Text));
+                w.BooksGrid.ItemsSource = (from book in db.Books where book.Title == this.TitleText.Text && Convert.ToString(book.Year) == this.YearText.Text && book.Author == this.AuthorText.Text join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, ReadingStatus = readingstatus.BookStatus }).ToList();
                 this.Close();
             }
         }

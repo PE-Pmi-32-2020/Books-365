@@ -98,7 +98,7 @@
                 db.SaveChanges();
                 db.ReadingStatuses.Add(new ReadingStatus
                 {
-                    UserEmail = db.EmailCurrentUser.FirstOrDefault().ToString(),
+                    UserEmail = db.EmailCurrentUser.FirstOrDefault().Email,
                     BookISBN = db.Books
                     .Where(u => u.Title == titleText)
                     .Where(u => u.Year == yearText)
