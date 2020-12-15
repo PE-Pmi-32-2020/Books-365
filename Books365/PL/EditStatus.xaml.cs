@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Books365.BLL;
+using Microsoft.Data.SqlClient;
+using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,25 +26,39 @@ namespace Books365.PL
             this.InitializeComponent();
         }
 
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+
         private void Button_change_Click(object sender, RoutedEventArgs e)
         {
             using (AppContext db = new AppContext())
             {
-                Book book = db.Books.Where(u => u.ISBN == Convert.ToInt32(this.BookISBN.Text)).FirstOrDefault();
-                ReadingStatus rs = db.ReadingStatuses.Where(u => u.BookISBN == Convert.ToInt32(this.BookISBN.Text)).FirstOrDefault();
-                if (this.PagesRead.Text != "Pages Read" && this.PagesRead.Text != "")
+                try
                 {
-                    rs.PagesWritten += Convert.ToInt32(this.PagesRead.Text);
+                    Validator v = new Validator();
+
+                    Book book = db.Books.Where(u => u.ISBN == Convert.ToInt32(this.BookISBN.Text)).FirstOrDefault();
+                    ReadingStatus rs = db.ReadingStatuses.Where(u => u.BookISBN == Convert.ToInt32(this.BookISBN.Text)).FirstOrDefault();
+                    if (this.PagesRead.Text != "Pages Read" && this.PagesRead.Text != string.Empty && v.PagesIsValid(this.PagesRead))
+                    {
+                        rs.PagesWritten += int.Parse(this.PagesRead.Text);
+                    }
+
+                    if (this.FinishedBook.IsChecked ?? false)
+                    {
+                        rs.BookStatus = "read";
+                    }
+
+                    if (this.RatingText.Text != "Rating" && this.RatingText.Text != string.Empty && v.RatingIsValid(this.RatingText))
+                    {
+                        rs.Rating = Convert.ToDouble(this.RatingText.Text);
+                    }
+
+                    db.SaveChanges();
                 }
-                if (this.FinishedBook.IsChecked ?? false)
+                catch (SqlException ex)
                 {
-                    rs.BookStatus = "read";
+                    Logger.Error($"Database connection is not avaliable {ex.Message}");
                 }
-                if(this.RatingText.Text!="Rating" && this.RatingText.Text != "")
-                {
-                    rs.Rating = Convert.ToInt32(RatingText.Text);
-                }
-                db.SaveChanges();
             }
 
             Window1 window = new Window1();

@@ -183,5 +183,49 @@ namespace Books365.BLL
 
             return true;
         }
+
+        /// <summary>
+        /// Function that check if Year that user inputs is correct.
+        /// </summary>
+        public bool RatingIsValid(TextBox ratingText)
+        {
+            if (!double.TryParse(ratingText.Text, out double res))
+            {
+                MessageBox.Show("Input must be a number", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ratingText.Focus();
+                return false;
+            }
+            else if (Convert.ToDouble(ratingText.Text) < 0 || Convert.ToDouble(ratingText.Text) > 10)
+            {
+                MessageBox.Show("Rating must be >= 0 and <= 10", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                ratingText.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
+
+        /// <summary>
+        /// Function that check if Year that user inputs is correct.
+        /// </summary>
+        public bool PagesIsValid(TextBox pagesText)
+        {
+            if (!int.TryParse(pagesText.Text, out int res))
+            {
+                MessageBox.Show("Input must be a number", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                pagesText.Focus();
+                return false;
+            }
+            else if (Convert.ToInt32(pagesText.Text) < 0 )
+            {
+                MessageBox.Show("Rating must be >= 0", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                pagesText.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
     }
 }

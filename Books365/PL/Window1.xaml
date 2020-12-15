@@ -43,8 +43,8 @@
 
         <Image Source="/PL/Images/Logo.png" Width="85"  Margin="42,36,0,364" HorizontalAlignment="Left" Grid.RowSpan="2"/>
         <TextBox x:Name="search_textbox" HorizontalAlignment="Left" Margin="42,56,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="109" Height="24" Grid.Row="1"/>
-        <StackPanel Grid.Row="0" Margin="0,0,-610,0" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Orientation="Vertical">
-            <TextBlock x:Name="user_name_text_block" FontSize="20" MouseDown="User_name_text_block_MouseDown" MouseEnter="User_name_text_block_MouseEnter" MouseLeave="User_name_text_block_MouseLeave" Text="UserName" Foreground="White"/>
+        <StackPanel Grid.Row="0" Margin="0,0,-695,0" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Orientation="Vertical">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="user_name_text_block" FontSize="20" MouseDown="User_name_text_block_MouseDown" MouseEnter="User_name_text_block_MouseEnter" MouseLeave="User_name_text_block_MouseLeave" Text="UserName" Foreground="White"/>
             <Border Width="95"
                 Height="2"
                 Background="White"
@@ -56,7 +56,7 @@
         <Button x:Name="simple_search_button" Content="Search" HorizontalAlignment="Left" Margin="156,52,0,0" VerticalAlignment="Top" Height="33" Width="51" Grid.Row="1" Click="Simple_search_button_Click" RenderTransformOrigin="0.518,0.567"/>
         <Button x:Name="Reset_button" Content="Reset" HorizontalAlignment="Left" Margin="215,52,0,0" VerticalAlignment="Top" Height="33" Width="51" Grid.Row="1" Click="Reset_button_Click" RenderTransformOrigin="0.518,0.567"/>
 
-        <Button x:Name="log_out_button" Content="Log out" HorizontalAlignment="Left" Margin="720,5,0,0" VerticalAlignment="Top" Height="34" Width="94" Click="Log_out_button_Click" Grid.Row="1"/>
+        <Button x:Name="log_out_button" Content="Log out" HorizontalAlignment="Left" Margin="750,5,0,0" VerticalAlignment="Top" Height="34" Width="94" Click="Log_out_button_Click" Grid.Row="1"/>
         <Button x:Name="notifications_button"    Content="SetNotifications" Grid.Row="1" Click="Notifications_button_Click" Margin="736,327,42,26"/>
 
         <DataGrid x:Name="BooksGrid" Margin="10,90,169,0" AutoGenerateColumns="False" Height="270" Grid.Row="1" VerticalAlignment="Top" Loaded="BooksGrid_Loaded">

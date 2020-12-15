@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Books365.PL" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" AllowsTransparency="True" WindowStyle="None">
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" AllowsTransparency="True" WindowStyle="None"
+        Icon="/PL/Images/bicon.ico">
     <Window.Resources>
         <Storyboard x:Key="Storyboard1">
             <PointAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
