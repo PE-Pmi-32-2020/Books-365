@@ -107,7 +107,7 @@
                     PagesWritten = 0,
                     Rating = 0,
                     StartOfReading = DateTime.Now,
-                    BookStatus = "started reading",
+                    BookStatus = "reading",
                 });
 
                 db.SaveChanges();

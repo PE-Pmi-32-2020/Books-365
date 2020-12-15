@@ -44,7 +44,7 @@ namespace Books365.PL
                 using (AppContext db = new AppContext())
                 {
                     db.Books.Load();
-                    this.BooksGrid.ItemsSource = (from book in db.Books where book.Title == this.search_textbox.Text join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, ReadingStatus = readingstatus.BookStatus }).ToList();
+                    this.BooksGrid.ItemsSource = (from book in db.Books where book.Title == this.search_textbox.Text join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Id = book.ISBN, Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, ReadingStatus = readingstatus.BookStatus }).ToList();
 
                     //this.BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
                                                     //.Where(b => b.Title == this.search_textbox.Text);
@@ -56,10 +56,29 @@ namespace Books365.PL
             }
         }
 
-        private void Advanced_search_button_Click(object sender, RoutedEventArgs e)
+        private void Reset_button_Click(object sender, RoutedEventArgs e)
         {
-            AdvancedSearch search = new AdvancedSearch();
-            search.Show();
+            try
+            {
+                using (AppContext db = new AppContext())
+                {
+                    db.Books.Load();
+                    this.BooksGrid.ItemsSource = (from book in db.Books join readingstatus in db.ReadingStatuses on book.ISBN equals readingstatus.BookISBN select new { Id = book.ISBN, Title = book.Title, Author = book.Author, Year = book.Year, Rating = readingstatus.Rating, Pages = readingstatus.PagesWritten, ReadingStatus = readingstatus.BookStatus }).ToList();
+
+                    //this.BooksGrid.ItemsSource = db.Books.Local.ToBindingList()
+                    //.Where(b => b.Title == this.search_textbox.Text);
+                }
+            }
+            catch (SqlException ex)
+            {
+                Logger.Error($"Database connection is not avaliable {ex.Message}");
+            }
+        }
+
+        private void change_status_button_Click(object sender, RoutedEventArgs e)
+        {
+            EditStatus editStatus = new EditStatus();
+            editStatus.Show();
             this.Close();
         }
 

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None"
-        Title="ShowBooks" Height="450" Width="800"
+        Title="ShowBooks" Height="450" Width="900"
         Icon="/PL/Images/bicon.ico">
 
     <Grid x:Name="GridOfWindow" MouseLeftButtonDown="GridOfWindow_MouseLeftButtonDown">
@@ -18,7 +18,7 @@
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="6*"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,10,21,-10">
             <Border.Background>
                 <LinearGradientBrush>
@@ -40,24 +40,26 @@
                 </Button.Content>
             </Button>
         </StackPanel>
-        
+
         <Image Source="/PL/Images/Logo.png" Width="85"  Margin="42,36,0,364" HorizontalAlignment="Left" Grid.RowSpan="2"/>
         <TextBox x:Name="search_textbox" HorizontalAlignment="Left" Margin="42,56,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="109" Height="24" Grid.Row="1"/>
         <StackPanel Grid.Row="0" Margin="0,0,-610,0" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Orientation="Vertical">
-            <TextBlock x:Name="user_name_text_block" FontSize="20" MouseDown="User_name_text_block_MouseDown" MouseEnter="User_name_text_block_MouseEnter" MouseLeave="User_name_text_block_MouseLeave" Text="UserName" Foreground="White" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="user_name_text_block" FontSize="20" MouseDown="User_name_text_block_MouseDown" MouseEnter="User_name_text_block_MouseEnter" MouseLeave="User_name_text_block_MouseLeave" Text="UserName" Foreground="White"/>
             <Border Width="95"
                 Height="2"
                 Background="White"
                 Opacity="0.5" VerticalAlignment="Top"/>
         </StackPanel>
-        
-        <Button x:Name="add_book_button" Content="Add book" RenderTransformOrigin="0.496,0.548" Margin="419,0,293,305" Grid.Row="1" Click="Add_book_button_Click" Height="32" VerticalAlignment="Bottom"/>
-        <Button x:Name="simple_search_button" Content="Search" HorizontalAlignment="Left" Margin="156,52,0,0" VerticalAlignment="Top" Height="33" Width="51" Grid.Row="1" Click="Simple_search_button_Click" RenderTransformOrigin="0.518,0.567"/>
-        <Button x:Name="advanced_search_button" Content="Advanced search" HorizontalAlignment="Left" Margin="228,52,0,0" VerticalAlignment="Top" Height="33" Width="92" Grid.Row="1" Click="Advanced_search_button_Click" RenderTransformOrigin="0.518,0.567"/>
-        <Button x:Name="log_out_button" Content="Log out" HorizontalAlignment="Left" Margin="658,5,0,0" VerticalAlignment="Top" Height="34" Width="94" Click="Log_out_button_Click" Grid.Row="1"/>
-        <Button x:Name="notifications_button"    Content="SetNotifications" Grid.Row="1" Click="Notifications_button_Click" Margin="631,327,59,26"/>
 
-        <DataGrid x:Name="BooksGrid" Margin="42,90,169,0" AutoGenerateColumns="False" Height="270" Grid.Row="1" VerticalAlignment="Top" Loaded="BooksGrid_Loaded">
+        <Button x:Name="add_book_button" Content="Add book" RenderTransformOrigin="0.496,0.548" Margin="300,0,504,305" Grid.Row="1" Click="Add_book_button_Click" Height="32" VerticalAlignment="Bottom"/>
+        <Button x:Name="change_status" Content="Change Status" RenderTransformOrigin="0.496,0.548" Margin="419,0,385,305" Grid.Row="1" Click="change_status_button_Click" Height="32" VerticalAlignment="Bottom"/>
+        <Button x:Name="simple_search_button" Content="Search" HorizontalAlignment="Left" Margin="156,52,0,0" VerticalAlignment="Top" Height="33" Width="51" Grid.Row="1" Click="Simple_search_button_Click" RenderTransformOrigin="0.518,0.567"/>
+        <Button x:Name="Reset_button" Content="Reset" HorizontalAlignment="Left" Margin="215,52,0,0" VerticalAlignment="Top" Height="33" Width="51" Grid.Row="1" Click="Reset_button_Click" RenderTransformOrigin="0.518,0.567"/>
+
+        <Button x:Name="log_out_button" Content="Log out" HorizontalAlignment="Left" Margin="720,5,0,0" VerticalAlignment="Top" Height="34" Width="94" Click="Log_out_button_Click" Grid.Row="1"/>
+        <Button x:Name="notifications_button"    Content="SetNotifications" Grid.Row="1" Click="Notifications_button_Click" Margin="736,327,42,26"/>
+
+        <DataGrid x:Name="BooksGrid" Margin="10,90,169,0" AutoGenerateColumns="False" Height="270" Grid.Row="1" VerticalAlignment="Top" Loaded="BooksGrid_Loaded">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ISBN" Width="120"/>
                 <DataGridTextColumn Binding="{Binding Title}" Header="Book Name" Width="120"/>

@@ -542,3 +542,5 @@ C:\Users\Vovchyk Halamaha\source\repos\BooksProject\Books365\obj\Debug\netcoreap
 C:\Users\Vovchyk Halamaha\source\repos\BooksProject\Books365\obj\Debug\netcoreapp3.1\Books365.dll
 C:\Users\Vovchyk Halamaha\source\repos\BooksProject\Books365\obj\Debug\netcoreapp3.1\Books365.pdb
 C:\Users\Vovchyk Halamaha\source\repos\BooksProject\Books365\obj\Debug\netcoreapp3.1\Books365.genruntimeconfig.cache
+C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\PL\EditStatus.g.cs
+C:\Users\Kyryl\Desktop\Books365\Books365\obj\Debug\netcoreapp3.1\PL\EditStatus.baml

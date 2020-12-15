@@ -8349,23 +8349,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kyryl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\BooksProject\\Books365\\Books365.csproj",
+      "projectUniqueName": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\Books365.csproj",
       "projectName": "Books365",
-      "projectPath": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\BooksProject\\Books365\\Books365.csproj",
-      "packagesPath": "C:\\Users\\Vovchyk Halamaha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vovchyk Halamaha\\source\\repos\\BooksProject\\Books365\\obj\\",
+      "projectPath": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\Books365.csproj",
+      "packagesPath": "C:\\Users\\Kyryl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kyryl\\Desktop\\Books365\\Books365\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Vovchyk Halamaha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kyryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8373,8 +8369,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://devops.intenselab.eu:8844/nuget": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -8458,7 +8453,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

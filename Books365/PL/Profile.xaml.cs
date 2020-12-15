@@ -91,22 +91,16 @@ namespace Books365.PL
                     this.Total.Text += totalpages.ToString();
                     this.Booksfinished.Text += booksRead.Count().ToString();
 
-                    if (readAuthors.Length != 0)
+                    if (readAuthors.Length > 1)
                     {
-                        var nameGroup = readAuthors.GroupBy(x => x);
-                        var maxCount = nameGroup.Max(g => g.Count());
-                        var mostCommons = nameGroup.Where(x => x.Count() == maxCount).Select(x => x.Key).ToArray();
-                        if (mostCommons.Length < 3)
-                        {
-                            foreach (var item in mostCommons)
-                            {
-                                this.favouriteautor.Text += item.ToString() + " ";
-                            }
-                        }
-                        else
-                        {
-                            this.favouriteautor.Text += "Wow. A lot of Authors to Like";
-                        }
+                        var maxRepeatedItem = readAuthors.GroupBy(x => x)
+                          .OrderByDescending(x => x.Count())
+                          .First().Key;
+                        this.favouriteautor.Text += maxRepeatedItem.ToString();
+                    }
+                    else if(readAuthors.Length==1)
+                    {
+                        this.favouriteautor.Text += readAuthors[0].ToString();
                     }
                 }
             }
